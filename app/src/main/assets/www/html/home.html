@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="img-src * blob: android-webview-video-poster: cdvphotolibrary:  'self' data: ws: wss://*; default-src * blob: 'self' gap: wss: ws: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src * http: https: ws: wss://*;">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    
+
+    <title>Doosan Enerbility</title>
+
+    <!-- <script type="text/javascript" src="../cordova.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="../js/jquery-mobile/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../css/home.css"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="../js/jquery/jquery-1.10.2.min.js"></script>
+    
+    <script type="text/javascript" src="../js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript"
+            src="../js/jquery-ui-1.12.1/jquery.uitouch-punch.min.js"></script>
+
+    <script type="text/javascript" src="../js/commonUtil.js"></script>
+    <script type="text/javascript" src="../js/oracle/mcs.js"></script>
+    <script type="text/javascript" src="../js/oracle/mcsConfig.js"></script>
+
+    <script type="text/javascript" src="../js/radial-progress-bar.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazyload.min.js"></script>
+
+</head>
+
+<body bgproperties="fixed">
+    <div id="cover"></div>
+    <div class="container">
+                <div class="header">
+                    
+                    <div class="ui-grid-c">
+                        <div class="ui-block-a">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="ui-block-b">
+                        </div>
+                        <div class="ui-block-c">
+                        </div>
+                        <div class="ui-block-d" style="padding:0.3rem">
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <!-- <div class="setting"></div> -->
+                                </div>
+                                <div class="ui-block-b">
+                                    <!-- <div class="menu"></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+ 
+            <!-- content -->
+            <div class="content">
+                <div style="margin-left: 30vw;margin-top:15vh; color:#fff">
+                <p style="font-size: 1.5rem;line-height: 0rem;">OOO님</p>
+                <p style="font-size: 1.5rem;line-height: 1rem;">안녕하세요</p>
+                </div>
+
+            </div>
+            <!-- content -->
+            
+    </div>
+            <!-- footer -->
+            <div class="footer">
+                <a href="#" onclick="gotoPage('page01')">
+                    <div class="ui-grid-b menu_btn">
+                        <div class="ui-block-a" style="width: 10vw;">
+                            <div class="menu_btn_bg"><div class="page01"></div></div>
+                        </div>
+                        <div class="ui-block-b" style="line-height:2.5rem;width: 70vw;padding-left:1rem;">
+                            <span>Main View</span>
+                        </div>
+                        <div class="ui-block-c" style="width: 10vw;">
+                            <div class="r_arrow"></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" onclick="gotoPage('page02')">
+                    <div class="ui-grid-b menu_btn">
+                        <div class="ui-block-a" style="width: 10vw;">
+                            <div class="menu_btn_bg"><div class="page02"></div></div>
+                        </div>
+                        <div class="ui-block-b" style="line-height:2.5rem;width: 70vw;padding-left:1rem;">
+                            <span>가동율/이용률 현황</span>
+                        </div>
+                        <div class="ui-block-c" style="width: 10vw;">
+                            <div class="r_arrow"></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" onclick="gotoPage('page03')">
+                    <div class="ui-grid-b menu_btn">
+                        <div class="ui-block-a" style="width: 10vw;">
+                            <div class="menu_btn_bg"><div class="page03"></div></div>
+                        </div>
+                        <div class="ui-block-b" style="line-height:2.5rem;width: 70vw;padding-left:1rem;">
+                            <span>Alarm현황</span>
+                        </div>
+                        <div class="ui-block-c" style="width: 10vw;">
+                            <div class="r_arrow"></div>
+                        </div>
+                    </div>
+                </a>  
+                <a href="#" onclick="gotoPage('page04')">
+                    <div class="ui-grid-b menu_btn">
+                        <div class="ui-block-a" style="width: 10vw;">
+                            <div class="menu_btn_bg"><div class="page04"></div></div>
+                        </div>
+                        <div class="ui-block-b" style="line-height:2.5rem;width: 70vw;padding-left:1rem;">
+                            <span>발전량</span>
+                        </div>
+                        <div class="ui-block-c" style="width: 10vw;">
+                            <div class="r_arrow"></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" onclick="gotoPage('page05')">
+                    <div class="ui-grid-b menu_btn">
+                        <div class="ui-block-a" style="width: 10vw;">
+                            <div class="menu_btn_bg"><div class="page05"></div></div>
+                        </div>
+                        <div class="ui-block-b" style="line-height:2.5rem;width: 70vw;padding-left:1rem;">
+                            <span>Remote Service(Case현황)</span>
+                        </div>
+                        <div class="ui-block-c" style="width: 10vw;">
+                            <div class="r_arrow"></div>
+                        </div>
+                    </div>
+                </a>
+                
+
+            </div>
+            <!-- footer -->
+
+       
+   
+            <!-- nav menu -->
+            <div id="nav_menu">
+                
+                <a href="#" onclick="close_menu()"><div class="arrow_back" style="width:20vw;margin-left:1.5;height:3rem;"></div></a>
+                <a href="#" onclick="gotoPage('page01')">
+                <div class="ui-grid-a menu_btn2 ui-btn-active" style="background-color: #d0ebff;">
+                    <div class="ui-block-a " style="width: 10vw;"><div class="page01" ></div></div>
+                    <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>Main View</span></div>
+                </div>
+                </a>
+                <a href="#" onclick="gotoPage('page02')">
+                <div class="ui-grid-a menu_btn2 ui-btn-active">
+                    <div class="ui-block-a " style="width: 10vw;"><div class="page02"></div></div>
+                    <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>가동율/이용률 현황</span></div>
+                </div>
+                </a>
+                <a href="#" onclick="gotoPage('page03')">
+                <div class="ui-grid-a menu_btn2 ui-btn-active">
+                    <div class="ui-block-a " style="width: 10vw;"><div class="page03"></div></div>
+                    <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>Alarm현황</span></div>
+                </div>
+                </a>
+                <a href="#" onclick="gotoPage('page04')">
+                <div class="ui-grid-a menu_btn2 ui-btn-active">
+                    <div class="ui-block-a " style="width: 10vw;"><div class="page04"></div></div>
+                    <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>발전량</span></div>
+                </div>
+                </a>
+                <a href="#" onclick="gotoPage('page05')">
+                <div class="ui-grid-a menu_btn2 ui-btn-active">
+                    <div class="ui-block-a " style="width: 10vw;"><div class="page05"></div></div>
+                    <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>Remote Service(Case현황)</span></div>
+                </div>
+                </a>
+                
+            </div>
+    
+</body>
+
+</html>

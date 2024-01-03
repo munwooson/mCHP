@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    
+
+    <title>Doosan Enerbility</title>
+
+     <script type="text/javascript" src="../cordova.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/jquery-mobile/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/page.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="../js/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="../js/commonUtil.js"></script>
+    
+    
+    <script type="text/javascript" src="../js/chart3.5.1.js"></script>
+    <script type="text/javascript" src="../js/datalabel.js"></script>
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <script type="text/javascript" src="../js/owl.carousel.min.js"></script>
+</head>
+
+<body bgproperties="fixed">
+    <div id="cover"></div>
+
+            <!--header-->
+            <div class="page_header">
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">
+                        <div class="page_logo"></div>
+                    </div>
+                    <div class="ui-block-b"></div>
+                    <div class="ui-block-c"></div>
+                    <div class="ui-block-d" style="padding:0.3rem">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <!-- <div class="setting"></div> -->
+                            </div>
+                            <div class="ui-block-b"><div class="menu"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--header-->
+    
+            <!-- container -->
+            <div class="page_content" style="height: auto;">
+                <div style="background-color: #fff;">
+                    <div class="ui-grid-solo">
+                        <div class="ui-block-a">
+                            <div style="padding:0.5em;font-size: 1.2em;font-weight: bold;">
+                                전남육상풍력
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <!--tab header-->
+                <div style="background-color: #fff;">
+                    <!-- <div class="ui-grid-b">
+                        <div class="ui-block-a page_tab" style="background-color: #0058c2 ;color:#fff">
+                                Main
+                        </div>
+                        <div class="ui-block-b page_tab">
+                                게시물
+                        </div>
+                        <div class="ui-block-c page_tab">
+                                정비현황
+                        </div>
+                       
+                    </div> -->
+                    <ul id="header">
+                        <li>Main</li>
+                        <li>게시물</li>
+                        <li>정비현황</li>
+                        <li class="slider"></li>
+                    </ul>
+                </div>
+                <div style="height: .1em;background-color: #0058c2;"></div>
+                <!--tab-->
+
+            </div>    
+            <!-- container -->
+            
+            <!--list-->
+            <div class="list_container">
+                <div class="list">
+                        <!--content-->
+                        <div class="owl-carousel" style="background-color: aliceblue;">
+                            <div class="item" data-hash="one" style="width:100%;"> 
+                                <!--tab0-->
+                                    <div id="tab0" class="tabs">
+                                        <div style="border: .1px solid #eee;">
+                                            <div class="ui-grid-d">
+                                                <div class="ui-block-a" style="background-color: #ccc;padding:.1em">
+                                                    <div style="background-color: #eee;padding:.5em;">
+                                                        <div style="font-size: .6em;color:#000">운전</div>
+                                                        <div style="height: 0.2em;border-radius: 0.2em; background-color: #00C853;margin:.5em 0 .1em 0"></div>
+                                                        <div style="font-size: 1.5em;color:#00C853;font-weight: bold;text-align: right;">12</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-block-b" style="background-color: #ccc;padding:.1em">
+                                                    <div style="background-color: #eee;padding:.5em">
+                                                        <div style="font-size: .6em;color:#000">대기</div>
+                                                        <div style="height: 0.2em;border-radius: 0.2em; background-color: #0091EA;margin:.5em 0 .1em 0"></div>
+                                                        <div style="font-size: 1.5em;color:#0091EA;font-weight: bold;text-align: right;">32</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-block-c" style="background-color: #ccc;padding:.1em">
+                                                    <div style="background-color: #eee;padding:.5em">
+                                                        <div style="font-size: .6em;color:#000">서비스</div>
+                                                        <div style="height: 0.2em;border-radius: 0.2em; background-color: #FF6D00;margin:.5em 0 .1em 0"></div>
+                                                        <div style="font-size: 1.5em;color:#FF6D00;font-weight: bold;text-align: right;">9</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-block-d" style="background-color: #ccc;padding:.1em">
+                                                    <div style="background-color: #eee;padding:.5em">
+                                                        <div style="font-size: .6em;color:#000">에러</div>
+                                                        <div style="height: 0.2em;border-radius: 0.2em; background-color: #DD2C00;margin:.5em 0 .1em 0"></div>
+                                                        <div style="font-size: 1.5em;color:#DD2C00;font-weight: bold;text-align: right;">0</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-block-e" style="background-color: #ccc;padding:.1em">
+                                                    <div style="background-color: #eee;padding:.5em">
+                                                        <div style="font-size: .6em;color:#000;white-space: nowrap;text-overflow: hidden;overflow: hidden;">계통/통신장애</div>
+                                                        <div style="height: 0.2em;border-radius: 0.2em; background-color: #607D8B;margin:.5em 0 .1em 0"></div>
+                                                        <div style="font-size: 1.5em;color:#607D8B;font-weight: bold;text-align: right;">1</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="border: 1px solid #aaa;">
+                                            <div id="googleMap" style="width: 100%; height: 30vh;"></div>
+                                            <!-- <img src="../img/map.PNG" onclick="page_popup()" style="width: 100%; height: 30vh;"> -->
+                                        </div>
+                                        <script>
+                                            function myMap(){
+                                               const myLatLng = { lat: 35.416145, lng: 126.408785 };
+                                               const myLatLng2 = { lat: 35.460690, lng: 126.456749 };
+                                               const myLatLng3 = { lat: 35.356145, lng: 126.358785 };
+                                               var mapOptions = { 
+                                                     center:new google.maps.LatLng(myLatLng),
+                                                     zoom:10,
+                                                    // gestureHandling: "none",
+                                                    // zoomControl: false,
+                                                     disableDefaultUI: true,
+                                               };
+                                               
+                                               var image = '../img/wind_turbin.svg';
+                                               var map = new google.maps.Map( 
+                                                      document.getElementById("googleMap") 
+                                                     , mapOptions );
+                                                var marker1 = new google.maps.Marker({
+                                                    position: myLatLng,
+                                                    map,
+                                                    icon: image,
+                                                    title: "풍력발전소",
+                                                });      
+                                                var marker2 = new google.maps.Marker({
+                                                    position: myLatLng2,
+                                                    map,
+                                                    icon: image,
+                                                    title: "풍력발전소2",
+                                                });
+                                                var marker3 = new google.maps.Marker({
+                                                    position: myLatLng3,
+                                                    map,
+                                                    icon: image,
+                                                    title: "풍력발전소3",
+                                                });                                                
+                                                marker1.addListener("click", () => {
+                                                    page_popup('#00C853');
+                                                 });  
+                                                 marker2.addListener("click", () => {
+                                                    page_popup('#00B0FF');
+                                                 });
+                                                 marker3.addListener("click", () => {
+                                                    page_popup('#B388FF');
+                                                 });
+                                                 var owl = $('.owl-carousel');
+                                                map.addListener('dragstart',function(event) {
+                                                    owl.trigger('destroy.owl.carousel');
+                                                    owl.owlCarousel({
+                                                        items: 1,
+                                                        touchDrag: false,
+                                                        mouseDrag: false,
+                                                        autoHeight:true,
+                                                    });
+                                                 });
+                                                map.addListener("dragend", () => {
+                                                    owl.trigger('destroy.owl.carousel');
+                                                    owl.owlCarousel({
+                                                        items: 1,
+                                                        touchDrag: true,
+                                                        mouseDrag: true, 
+                                                        autoHeight:true,
+                                                    });
+                                                });    
+
+
+                                            }
+                                         </script> 
+                                        <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB17ri-tjomqeBlO7-GdsCn9mQRo6oLeFk&callback=myMap"></script>
+
+                                        <div style="margin-top:.3em">
+                                            <div class="ui-grid-a">
+                                                <div class="ui-block-a">
+                                                    <div style="background-color: #FBC02D;padding:.7em .5em; border-radius: .3em;font-weight: bold;text-align: center;">
+                                                        출력: 2.3MW
+                                                    </div>
+                                                </div>
+                                                <div class="ui-block-b">
+                                                    <div style="background-color: #FBC02D;padding:.7em .5em; border-radius: .3em;font-weight: bold;text-align: center;margin-left:.3em">
+                                                        풍속: 5.2m/s
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- 상태 표시창 -->
+                                        
+                                        <div class="page_card">
+                                            <div style="color: #FFF;font-size: 1em;background-color: #0058c2;border-top-right-radius: .2em;border-top-left-radius: .2em;padding:.5em">정비중인 메세지</div>
+                                            <div style="padding:.5em;font-size: .8em;">풍력발전기 터빈 1.2호기  정비진행중/ 풍력발전기 터빈  6호기 정비진행중</div>
+                                        </div>
+                                        <div class="page_card">
+                                            <div style="color: #FFF;font-size: 1em;background-color: #0058c2;border-top-right-radius: .2em;border-top-left-radius: .2em;padding:.5em">현재 발생한 알람</div>
+                                            <div style="padding:.5em;font-size: .8em;">알람이 없습니다.</div>
+                                        </div>
+                                        <div class="page_card" style="height: auto !important;margin-bottom: 0;">
+                                            <div style="color: #FFF;font-size: 1em;background-color: #0058c2;border-top-right-radius: .2em;border-top-left-radius: .2em;padding:.5em">
+                                                <div>가동율 전일/합산</div>
+                                                <div>이용율 전일/합산</div>
+                                            </div>
+                                            <div> <canvas id="chart" ></canvas></div>
+                                            <script>
+                                                var ctx = document.getElementById('chart').getContext('2d');
+                                                    var chart = new Chart(ctx, {
+                                                        type: 'bar', 
+                                                        plugins:[ChartDataLabels],
+                                                        data: {
+                                                            labels: ['1월','2월','3월', '4월'],
+                                                            datasets: [
+                                                            {
+                                                                label: '',
+                                                                type:'line',
+                                                                borderColor: '#FDD835',
+                                                                data: [50 ,45, 46, 50],
+                                                                fill:false,
+                                                            },    
+                                                            {
+                                                                label: '',
+                                                                backgroundColor: [
+                                                                    '#303f9e',
+                                                                ],
+                                                                borderColor: 'rgb(255, 99, 132)',
+                                                                data: [101 ,94, 97, 99],
+                                                                
+                                                            }
+                                                        
+                                                        ]
+                                                        },
+                                                        datalabels:{
+                                                                    color:'white',         
+                                                                    font:{size:10}        
+                                                                },
+                                                        options: {
+                                                                scales: {
+                                                                    yAxes: {
+                                                                        ticks: {
+                                                                            min: 0,
+                                                                            max: 200,
+                                                                            fontSize : 5, 
+                                                                            stepSize: 100
+                                                                        },
+                                                                        
+                                                                        
+                                                                        
+                                                                    },
+                                                                    xAxes: {
+                                                                        ticks: {
+                                                                            fontSize : 8, 
+                                                                        }
+                                                                        
+                                                                    }
+                                                                    },
+                                                                plugins:{
+                                                                    legend: {
+                                                                    display: false
+                                                                        }, 
+                                                                        datalabels:{
+                                                                            formatter:function(value,context){
+                                                                            // data 에 넣은 데이타 순번. 물론 0 부터 시작
+                                                                            var idx = context.dataIndex;
+                                                                            // 여기선 첫번째 데이타엔 단위를 '원' 으로, 그 다음 데이타엔 'P' 를 사용
+                                                                            // addComma() 는 여기서 기술하지 않았지만, 천단위 세팅. ChartJS 의 data 엔 숫자만 입력
+                                                                            //return value + '%';
+                                                                            return '';
+                                                                            },
+                                                                            font: { // font 설정
+                                                                                weight: 'bold',
+                                                                                size: '12px',
+                                                                            },
+                                                                            color: '#fff', // font color
+                                                                    }            
+                                                                },
+                                                            }
+                                                        
+                                                        
+                                                    });
+                                            </script>
+                                        </div>
+                                        <!-- 상태 표시창 -->
+
+                                </div>
+                                <!--tab0--> 
+
+
+                            </div>
+                            <div class="item" data-hash="two" style="width:100%;"> 
+                                 
+                                <!--tab2 -->
+                                <div id="tab1" class="tabs" style="padding:.5em;">
+                                    <!--sample-->
+                                    <div class="page_card2">
+                                        <!--user info-->
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a" style="width:15%">
+                                                <img src="../img/person.svg" width="40px" height="40px" style="background-color: #ccc;border-radius: 1.5em;"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:75%">
+                                                <div>홍길동(Gildong Hong) 선임</div>
+                                                <div style="font-size: .7em;">2023년 12월 01일 오후 1:00</div>
+                                            </div>
+                                            <div class="ui-block-c" style="width:10%">
+                                                <img src="../img/more.png">
+                                            </div>
+                                        </div>
+                                        <!--user info-->
+                                        <!--content -->
+                                        <div style="margin-top: .5em;">
+                                            이 채널 맨 위에 탭을 추가했습니다. 확인해 보세요!
+                                        </div>
+                                        <div class="ui-grid-a" style="border: 1px solid #ccc;border-radius: .5em;margin-top: 1em;">
+                                            <div class="ui-block-a" style="width:15%;padding:.3em">
+                                                <img src="../img/excel.PNG" width="30px" height="30px" style="background-color: #ccc"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:85%;font-size: .8em;">
+                                                <div style="line-height: 3.3em;">WIND TURBINE 문서 LIST</div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-a" style="padding:.5em">
+                                            <div class="ui-block-a" style="width:35px">
+                                                <img src="../img/add_person.svg" width="30px" height="30px"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:35px">
+                                                <img src="../img/file_save.svg" width="30px" height="30px"/>
+                                            </div>
+                                        </div>
+
+                                        <!--content -->
+                                        <div style="border-top: 1px solid #CCC;">
+                                            <div class="ui-grid-b">
+                                                <div class="ui-block-a" style="width:15%">
+                                                    <img src="../img/reply.svg" width="30px" height="30px" />
+                                                </div>
+                                                <div class="ui-block-b" style="width:85%">
+                                                    <input type="text" name="reply" id="reply" data-role="none" placeholder="회신" style="padding: 0.3em !important;border:none;width: 95%;outline: none;"/>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <!--sample-->  
+                                    <!--sample-->
+                                    <div class="page_card2">
+                                        <!--user info-->
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a" style="width:15%">
+                                                <img src="../img/person.svg" width="40px" height="40px" style="background-color: #ccc;border-radius: 1.5em;"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:75%">
+                                                <div>홍길동(Gildong Hong) 선임</div>
+                                                <div style="font-size: .7em;">2023년 12월 01일 오후 1:00</div>
+                                            </div>
+                                            <div class="ui-block-c" style="width:10%">
+                                                <img src="../img/more.png">
+                                            </div>
+                                        </div>
+                                        <!--user info-->
+                                        <!--content -->
+                                        <div style="margin-top: .5em;">
+                                            이 채널 맨 위에 탭을 추가했습니다. 확인해 보세요!
+                                        </div>
+                                        <div class="ui-grid-a" style="border: 1px solid #ccc;border-radius: .5em;margin-top: 1em;">
+                                            <div class="ui-block-a" style="width:15%;padding:.3em">
+                                                <img src="../img/excel.PNG" width="30px" height="30px" style="background-color: #ccc"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:85%;font-size: .8em;">
+                                                <div style="line-height: 3.3em;">WIND TURBINE 문서 LIST</div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-a" style="padding:.5em">
+                                            <div class="ui-block-a" style="width:35px">
+                                                <img src="../img/add_person.svg" width="30px" height="30px"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:35px">
+                                                <img src="../img/file_save.svg" width="30px" height="30px"/>
+                                            </div>
+                                        </div>
+                                        <!--content -->
+                                        <div style="border-top: 1px solid #CCC;">
+                                            <div class="ui-grid-b">
+                                                <div class="ui-block-a" style="width:15%">
+                                                    <img src="../img/reply.svg" width="30px" height="30px" />
+                                                </div>
+                                                <div class="ui-block-b" style="width:85%">
+                                                    <input type="text" name="reply" id="reply" data-role="none" placeholder="회신" style="padding: 0.3em !important;border:none;width: 95%;outline: none;"/>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <!--sample-->
+                                    <!--sample-->
+                                    <div class="page_card2">
+                                        <!--user info-->
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a" style="width:15%">
+                                                <img src="../img/person.svg" width="40px" height="40px" style="background-color: #ccc;border-radius: 1.5em;"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:75%">
+                                                <div>홍길동(Gildong Hong) 선임</div>
+                                                <div style="font-size: .7em;">2023년 12월 01일 오후 1:00</div>
+                                            </div>
+                                            <div class="ui-block-c" style="width:10%">
+                                                <img src="../img/more.png">
+                                            </div>
+                                        </div>
+                                        <!--user info-->
+                                        <!--content -->
+                                        <div style="margin-top: .5em;">
+                                            이 채널 맨 위에 탭을 추가했습니다. 확인해 보세요!
+                                        </div>
+                                        <div class="ui-grid-a" style="border: 1px solid #ccc;border-radius: .5em;margin-top: 1em;">
+                                            <div class="ui-block-a" style="width:15%;padding:.3em">
+                                                <img src="../img/excel.PNG" width="30px" height="30px" style="background-color: #ccc"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:85%;font-size: .8em;">
+                                                <div style="line-height: 3.3em;">WIND TURBINE 문서 LIST</div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-a" style="padding:.5em">
+                                            <div class="ui-block-a" style="width:35px">
+                                                <img src="../img/add_person.svg" width="30px" height="30px"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:35px">
+                                                <img src="../img/file_save.svg" width="30px" height="30px"/>
+                                            </div>
+                                        </div>
+                                        <!--content -->
+                                        <div style="border-top: 1px solid #CCC;">
+                                            <div class="ui-grid-b">
+                                                <div class="ui-block-a" style="width:15%">
+                                                    <img src="../img/reply.svg" width="30px" height="30px" />
+                                                </div>
+                                                <div class="ui-block-b" style="width:85%">
+                                                    <input type="text" name="reply" id="reply" data-role="none" placeholder="회신" style="padding: 0.3em !important;border:none;width: 95%;outline: none;"/>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <!--sample-->
+                                    <!--sample-->
+                                    <div class="page_card2">
+                                        <!--user info-->
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a" style="width:15%">
+                                                <img src="../img/person.svg" width="40px" height="40px" style="background-color: #ccc;border-radius: 1.5em;"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:75%">
+                                                <div>홍길동(Gildong Hong) 선임</div>
+                                                <div style="font-size: .7em;">2023년 12월 01일 오후 1:00</div>
+                                            </div>
+                                            <div class="ui-block-c" style="width:10%">
+                                                <img src="../img/more.png">
+                                            </div>
+                                        </div>
+                                        <!--user info-->
+                                        <!--content -->
+                                        <div style="margin-top: .5em;">
+                                            이 채널 맨 위에 탭을 추가했습니다. 확인해 보세요!
+                                        </div>
+                                        <div class="ui-grid-a" style="border: 1px solid #ccc;border-radius: .5em;margin-top: 1em;">
+                                            <div class="ui-block-a" style="width:15%;padding:.3em">
+                                                <img src="../img/excel.PNG" width="30px" height="30px" style="background-color: #ccc"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:85%;font-size: .8em;">
+                                                <div style="line-height: 3.3em;">WIND TURBINE 문서 LIST</div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-a" style="padding:.5em">
+                                            <div class="ui-block-a" style="width:35px">
+                                                <img src="../img/add_person.svg" width="30px" height="30px"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:35px">
+                                                <img src="../img/file_save.svg" width="30px" height="30px"/>
+                                            </div>
+                                        </div>
+                                        <!--content -->
+                                        <div style="border-top: 1px solid #CCC;">
+                                            <div class="ui-grid-b">
+                                                <div class="ui-block-a" style="width:15%">
+                                                    <img src="../img/reply.svg" width="30px" height="30px" />
+                                                </div>
+                                                <div class="ui-block-b" style="width:85%">
+                                                    <input type="text" name="reply" id="reply" data-role="none" placeholder="회신" style="padding: 0.3em !important;border:none;width: 95%;outline: none;"/>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <!--sample-->
+                                    <!--sample-->
+                                    <div class="page_card2">
+                                        <!--user info-->
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a" style="width:15%">
+                                                <img src="../img/person.svg" width="40px" height="40px" style="background-color: #ccc;border-radius: 1.5em;"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:75%">
+                                                <div>홍길동(Gildong Hong) 선임</div>
+                                                <div style="font-size: .7em;">2023년 12월 01일 오후 1:00</div>
+                                            </div>
+                                            <div class="ui-block-c" style="width:10%">
+                                                <img src="../img/more.png">
+                                            </div>
+                                        </div>
+                                        <!--user info-->
+                                        <!--content -->
+                                        <div style="margin-top: .5em;">
+                                            이 채널 맨 위에 탭을 추가했습니다. 확인해 보세요!
+                                        </div>
+                                        <div class="ui-grid-a" style="border: 1px solid #ccc;border-radius: .5em;margin-top: 1em;">
+                                            <div class="ui-block-a" style="width:15%;padding:.3em">
+                                                <img src="../img/excel.PNG" width="30px" height="30px" style="background-color: #ccc"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:85%;font-size: .8em;">
+                                                <div style="line-height: 3.3em;">WIND TURBINE 문서 LIST</div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-a" style="padding:.5em">
+                                            <div class="ui-block-a" style="width:35px">
+                                                <img src="../img/add_person.svg" width="30px" height="30px"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:35px">
+                                                <img src="../img/file_save.svg" width="30px" height="30px"/>
+                                            </div>
+                                        </div>
+                                        <!--content -->
+                                        <div style="border-top: 1px solid #CCC;">
+                                            <div class="ui-grid-b">
+                                                <div class="ui-block-a" style="width:15%">
+                                                    <img src="../img/reply.svg" width="30px" height="30px" />
+                                                </div>
+                                                <div class="ui-block-b" style="width:85%">
+                                                    <input type="text" name="reply" id="reply" data-role="none" placeholder="회신" style="padding: 0.3em !important;border:none;width: 95%;outline: none;"/>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <!--sample-->
+                                    <!--sample-->
+                                    <div class="page_card2">
+                                        <!--user info-->
+                                        <div class="ui-grid-b">
+                                            <div class="ui-block-a" style="width:15%">
+                                                <img src="../img/person.svg" width="40px" height="40px" style="background-color: #ccc;border-radius: 1.5em;"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:75%">
+                                                <div>홍길동(Gildong Hong) 선임</div>
+                                                <div style="font-size: .7em;">2023년 12월 01일 오후 1:00</div>
+                                            </div>
+                                            <div class="ui-block-c" style="width:10%">
+                                                <img src="../img/more.png">
+                                            </div>
+                                        </div>
+                                        <!--user info-->
+                                        <!--content -->
+                                        <div style="margin-top: .5em;">
+                                            이 채널 맨 위에 탭을 추가했습니다. 확인해 보세요!
+                                        </div>
+                                        <div class="ui-grid-a" style="border: 1px solid #ccc;border-radius: .5em;margin-top: 1em;">
+                                            <div class="ui-block-a" style="width:15%;padding:.3em">
+                                                <img src="../img/excel.PNG" width="30px" height="30px" style="background-color: #ccc"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:85%;font-size: .8em;">
+                                                <div style="line-height: 3.3em;">WIND TURBINE 문서 LIST</div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-a" style="padding:.5em">
+                                            <div class="ui-block-a" style="width:35px">
+                                                <img src="../img/add_person.svg" width="30px" height="30px"/>
+                                            </div>
+                                            <div class="ui-block-b" style="width:35px">
+                                                <img src="../img/file_save.svg" width="30px" height="30px"/>
+                                            </div>
+                                        </div>
+                                        <!--content -->
+                                        <div style="border-top: 1px solid #CCC;">
+                                            <div class="ui-grid-b">
+                                                <div class="ui-block-a" style="width:15%">
+                                                    <img src="../img/reply.svg" width="30px" height="30px" />
+                                                </div>
+                                                <div class="ui-block-b" style="width:85%">
+                                                    <input type="text" name="reply" id="reply" data-role="none" placeholder="회신" style="padding: 0.3em !important;border:none;width: 95%;outline: none;"/>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <!--sample-->                                                                                                                                            
+                                    
+
+                                </div>
+                                <!--tab2 -->
+                            </div>
+                            <div class="item" data-hash="three"style="width:100%;height:90vh;"> 
+
+                                <!--tab3 -->
+                                <div id="tab2" class="tabs" style="padding:.5em;">
+                                    <div> <canvas id="chart2" ></canvas></div>
+                                            <script>
+
+                                                const data01 = {
+                                                        label:'',
+                                                        data: [1, 2, 2, 2, 2, 1, 0.5, 0.1, 2, 1, 3, 1],
+                                                        backgroundColor: '#1e88e5',
+                                                };
+                                                const data02 = {
+                                                        label:'',
+                                                        data: [4, 3, 3.3, 2.9, 0.1, 1.05, 4.1, 3.5, 2.7, 3.1, 1.1, 0.8],
+                                                        backgroundColor: '#43A047',
+                                                };
+
+                                                var ctx = document.getElementById('chart2').getContext('2d');
+                                                    var chart = new Chart(ctx, {
+                                                        type: 'bar', 
+                                                        plugins:[ChartDataLabels],
+                                                        data: {
+                                                            labels: ['1월','2월','3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                                                            datasets: [
+                                                                data01,
+                                                                data02
+                                                            ]
+                                                        },
+                                                        datalabels:{
+                                                                    color:'white',         
+                                                                    font:{size:10}        
+                                                                },
+                                                        options: {
+                                                                responsive: true,
+                                                                maintainAspectRatio:false,
+                                                                scales: {
+                                                                
+                                                                    x:{
+                                                                        stacked:true
+                                                                    },
+                                                                    y:{
+                                                                        stacked:true
+                                                                    },
+                                                                    },
+                                                                plugins:{
+                                                                    legend: {
+                                                                    display: false
+                                                                        }, 
+                                                                        datalabels:{
+                                                                            formatter:function(value,context){
+                                                                            // data 에 넣은 데이타 순번. 물론 0 부터 시작
+                                                                            var idx = context.dataIndex;
+                                                                            // 여기선 첫번째 데이타엔 단위를 '원' 으로, 그 다음 데이타엔 'P' 를 사용
+                                                                            // addComma() 는 여기서 기술하지 않았지만, 천단위 세팅. ChartJS 의 data 엔 숫자만 입력
+                                                                            return '';
+                                                                            //return value + '%';
+                                                                            },
+                                                                            font: { // font 설정
+                                                                                weight: 'bold',
+                                                                                size: '12px',
+                                                                            },
+                                                                            color: '#fff', // font color
+                                                                    }            
+                                                                },
+                                                            }
+                                                        
+                                                        
+                                                    });
+                                            </script>
+                                    <div class="page_card3">
+                                        Case No. Case 상태. Case 설명. Case 담당자. 일자 등등
+                                    </div>        
+                                    <div class="page_card3">
+                                        Case No. Case 상태. Case 설명. Case 담당자. 일자 등등
+                                    </div>        
+                                </div>
+                                <!--tab3 -->
+                            </div>
+
+                        </div>
+                       <!--content-->
+                </div>
+            </div>
+
+        <!--popup
+        <div id="page_popup" style="position:absolute;top:30vh;height:auto;width:100vw;display: none;z-index: 100;">
+            <div style="width:100%;margin:auto;background-color: #fff;">
+
+                <div style="height: 2rem;padding-left:1rem;background-color: #0058c2;color: #FFF;">
+                    <div style="line-height: 2rem;float: left;"> </div> 
+                    <div class="page_close" style="float: right;" onclick="page_close()"></div>
+                    <div style="clear: both;"></div>
+                </div>
+
+
+                <div style="background-color: #FFF">
+
+                    <div style="font-size: .6em;padding:.3em;background-color: #00C853;border-radius: .5em;">
+                        <div class="ui-grid-a" style="font-weight: bold;">
+                            <div class="ui-block-a" style="width:80%">
+                                WTG_001
+                            </div>
+                            <div class="ui-block-b" style="width:20%">
+                                <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                            </div>
+                        </div>
+                        <div class="ui-grid-a" style="background-color: #eee;">
+                            <div class="ui-block-a">
+                                PreAlarm
+                            </div>
+                            <div class="ui-block-b">
+
+                            </div>
+                        </div>
+                        <div class="ui-grid-a" style="background-color: #eee;">
+                            <div class="ui-block-a">
+                                출력
+                            </div>
+                            <div class="ui-block-b">
+                                221.56kW
+                            </div>
+                        </div>
+                        <div class="ui-grid-a" style="background-color: #eee;">
+                            <div class="ui-block-a">
+                                풍속
+                            </div>
+                            <div class="ui-block-b">
+                                4.41 ms
+                            </div>
+                        </div>
+                        <div class="ui-grid-a" style="background-color: #eee;">
+                            <div class="ui-block-a">
+                                상태
+                            </div>
+                            <div class="ui-block-b">
+                                (7)발전
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="ui-grid-c">
+                        <div class="ui-block-a" style="padding: .1em;">
+
+                            <div style="font-size: .6em;padding:.3em;background-color: #00C853;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="ui-block-b"  style="padding: .1em;">
+
+                             <div style="font-size: .6em;padding:.3em;background-color: #00C853;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ui-block-c"  style="padding: .1em;">
+
+                             <div style="font-size: .6em;padding:.3em;background-color: #00B0FF;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ui-block-d" style="padding: .1em;">
+
+                             <div style="font-size: .6em;padding:.3em;background-color: #00B0FF;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>                        
+                    </div>
+
+                    <div class="ui-grid-c">
+                        <div class="ui-block-a" style="padding: .1em;">
+
+                            <div style="font-size: .6em;padding:.3em;background-color: #00C853;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ui-block-b"  style="padding: .1em;">
+
+                             <div style="font-size: .6em;padding:.3em;background-color: #00C853;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ui-block-c"  style="padding: .1em;">
+
+                             <div style="font-size: .6em;padding:.3em;background-color: #00C853;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ui-block-d" style="padding: .1em;">
+
+                             <div style="font-size: .6em;padding:.3em;background-color: #00C853;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>                        
+                    </div>
+
+                    <div class="ui-grid-c">
+                        <div class="ui-block-a" style="padding: .1em;">
+
+                            <div style="font-size: .6em;padding:.3em;background-color: #00C853;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ui-block-b"  style="padding: .1em;">
+
+                             <div style="font-size: .6em;padding:.3em;background-color: #00C853;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ui-block-c"  style="padding: .1em;">
+
+                             <div style="font-size: .6em;padding:.3em;background-color: #00B0FF;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="ui-block-d" style="padding: .1em;">
+
+                             <div style="font-size: .6em;padding:.3em;background-color: #00B0FF;border-radius: .5em;">
+                                <div class="ui-grid-a" style="font-weight: bold;">
+                                    <div class="ui-block-a" style="width:80%">
+                                    WTG_001
+                                    </div>
+                                    <div class="ui-block-b" style="width:20%">
+                                    <img src="../img/noti.png" style="width: 1.3em;height: 1.2em;">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                    PreAlarm
+                                    </div>
+                                    <div class="ui-block-b">
+                                    
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        출력
+                                    </div>
+                                    <div class="ui-block-b">
+                                        221.56kW
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        풍속
+                                    </div>
+                                    <div class="ui-block-b">
+                                        4.41 ms
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a" style="background-color: #eee;">
+                                    <div class="ui-block-a">
+                                        상태
+                                    </div>
+                                    <div class="ui-block-b">
+                                       (7)발전
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        popup-->
+
+
+    <div id="page_popup" style="position:absolute;top:50vh;left:10vw; height:auto;width:80%;display:none;z-index: 100;">
+        <div style="margin:auto;">
+            <!-- pop_content -->
+            <div style="background-color: transparent">
+                <div class="dialog_content"  style="padding:.3em;background-color: #00C853;border-radius: .5em;">
+                    <div class="ui-grid-b" style="font-weight: bold;">
+                        <div class="ui-block-a" style="width:70%;padding:.4em">WTG_001</div>
+                        <div class="ui-block-b" style="width:15%;padding:.4em"><img src="../img/noti.png" style="width: 1.3em;height: 1.2em;"/></div>
+                        <div class="ui-block-c" style="width:15%"><div class="page_close" style="float: right;" onclick="page_close()"></div></div>
+                    </div>
+                    <div style="padding:.5em;background-color: #eee;">
+                        <div class="ui-grid-a" style="">
+                            <div class="ui-block-a">PreAlarm</div>
+                            <div class="ui-block-b"></div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">출력</div>
+                            <div class="ui-block-b">221.56kW</div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">풍속</div>
+                            <div class="ui-block-b">4.41 ms</div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">상태</div>
+                            <div class="ui-block-b">(7)발전</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- pop_content -->
+        </div>
+    </div>
+
+    <!-- dialog
+    <div id="dialog" title="상세" style="background-color: #eee;">
+            
+                <div id="dialog_content" style="background-color: #6ceb18;">
+                    <div class="ui-grid-a" style="font-weight: bold;">
+                        <div class="ui-block-a" style="width:85%">WTG_001</div>
+                        <div class="ui-block-b" style="width:15%"><img src="../img/noti.png" style="width: 1.3em;height: 1.2em;"></div>
+                    </div>
+                    <div class="ui-grid-a" style="background-color: #eee;">
+                        <div class="ui-block-a">PreAlarm</div>
+                        <div class="ui-block-b"></div>
+                    </div>
+                    <div class="ui-grid-a" style="background-color: #eee;">
+                        <div class="ui-block-a">출력</div>
+                        <div class="ui-block-b">221.56kW</div>
+                    </div>
+                    <div class="ui-grid-a" style="background-color: #eee;">
+                        <div class="ui-block-a">풍속</div>
+                        <div class="ui-block-b">4.41 ms</div>
+                    </div>
+                    <div class="ui-grid-a" style="background-color: #eee;">
+                        <div class="ui-block-a">상태</div>
+                        <div class="ui-block-b">(7)발전</div>
+                    </div>
+                </div>
+            
+
+    </div>
+    pop_content -->
+                <!-- nav menu -->
+    <div id="nav_menu">
+        <a href="#" onclick="close_menu()"><div class="arrow_back" style="width:20vw;margin-left:1.5;height:3rem;"></div></a>
+    </div>
+
+
+    
+</body>
+<script>
+    var owl = $('.owl-carousel');
+
+    owl.owlCarousel({
+        items:1,
+        autoHeight:true,
+      });
+    // Listen to owl events:
+    owl.on('changed.owl.carousel', function(event) {
+        $("ul li").eq(event.page.index).click();
+            $('.list').animate({
+                scrollTop:0
+            })
+        //$owlCarousel.trigger('refresh.owl.carousel');
+        });
+ 
+    
+    
+    $("ul li").click(function(e) {
+        if ($(this).hasClass('slider')) {
+          return;
+        }
+        
+        /* Add the slider movement */
+        
+        // what tab was pressed
+        var whatTab = $(this).index();
+        $('.owl-carousel').trigger('to.owl.carousel', whatTab);
+        var bodyWidth = $('#header').width()/3;
+        // Work out how far the slider needs to go
+        var howFar = bodyWidth * whatTab;
+        
+        $(".slider").css({
+          left: howFar + "px"
+        });
+        
+        /* Add the ripple */
+        
+        // Remove olds ones
+        $(".ripple").remove();
+        
+        // Setup
+        var posX = $(this).offset().left,
+            posY = $(this).offset().top,
+            buttonWidth = $(this).width(),
+            buttonHeight = $(this).height();
+        
+        // Add the element
+        $(this).prepend("<span class='ripple'></span>");
+        
+        // Make it round!
+        if (buttonWidth >= buttonHeight) {
+          buttonHeight = buttonWidth;
+        } else {
+          buttonWidth = buttonHeight;
+        }
+        
+        // Get the center of the element
+        var x = e.pageX - posX - buttonWidth / 2;
+        var y = e.pageY - posY - buttonHeight / 2;
+        
+        // Add the ripples CSS and start the animation
+        $(".ripple").css({
+          width: buttonWidth,
+          height: buttonHeight,
+          top: y + 'px',
+          left: x + 'px'
+        }).addClass("rippleEffect");
+        });
+    
+         </script>
+
+</html>

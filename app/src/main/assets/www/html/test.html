@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <title>Doosan Enerbility</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div>
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 63, 5, 62, 73],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          
+          yAxes: {
+            ticks: {
+                min: 0,
+                max: 150,
+                fontSize : 10, 
+                stepSize: 12
+              }
+            
+          },
+        }
+      }
+    });
+  </script>
+    
+
+    
+</body>
+
+</html>

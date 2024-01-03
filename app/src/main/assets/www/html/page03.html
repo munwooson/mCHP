@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="img-src * blob: android-webview-video-poster: cdvphotolibrary:  'self' data: ws: wss://*; default-src * blob: 'self' gap: wss: ws: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src * http: https: ws: wss://*;">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    
+
+    <title>Doosan Enerbility</title>
+
+    <link rel="stylesheet" type="text/css" href="../js/jquery-mobile/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/page.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="../js/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript"
+            src="../js/jquery-ui-1.12.1/jquery.uitouch-punch.min.js"></script>
+    <script type="text/javascript" src="../js/commonUtil.js"></script>
+    <script type="text/javascript" src="../js/oracle/mcs.js"></script>
+    <script type="text/javascript" src="../js/oracle/mcsConfig.js"></script>
+    <script type="text/javascript" src="../js/pagefunction.js"></script>
+    <script type="text/javascript" src="../js/radial-progress-bar.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazyload.min.js"></script>
+
+</head>
+
+<body bgproperties="fixed">
+    <div id="cover"></div>
+            <!--header-->
+            <div class="page_header">
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">
+                        <div class="page_logo"></div>
+                    </div>
+                    <div class="ui-block-b"></div>
+                    <div class="ui-block-c"></div>
+                    <div class="ui-block-d" style="padding:0.3rem">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <!-- <div class="setting"></div> -->
+                            </div>
+                            <div class="ui-block-b"><div class="menu"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--header-->
+
+
+            <!-- container -->
+            <div class="page_content" style="height: auto;">
+                <div>
+                    <div class="ui-grid-b" style="width:100vw">
+                        <div class="ui-block-a" style="width:45vw">
+                            <div class="ui-field-contain" style="width:30px">
+                                <select name="select-native-1" id="select-native-1">
+                                    <option selected>Jeju_Hk**</option>
+                                    <option>test1</option>
+                                    <option>test2</option>
+                                    <option>test3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ui-block-b" style="width:5vw"></div>
+                        <div class="ui-block-c" style="width:45vw">
+                                <div class="ui-field-contain">
+                                    <select name="select-native-1" id="select-native-1">
+                                        <option selected>Select  Turbin</option>
+                                        <option>test1</option>
+                                        <option>test2</option>
+                                        <option>test3</option>
+                                    </select>
+                                </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--현장명-->
+                <div class="ui-grid-c" style="width:100vw">
+                    <div class="ui-block-a" style="width:30vw">
+                        <input type="date" name="date" id="fromDate" value=""  />
+                    </div>
+                    <div class="ui-block-b" style="margin:0;padding:0;width: 6vw;">
+                     <div style="padding-left: 0.1rem; margin:auto;line-height: 3.5rem;">～</div>
+                    </div>
+                    <div class="ui-block-c" style="width:30vw">
+                        <input type="date" name="date" id="toDate" value=""  />
+                    </div>
+                    <div class="ui-block-d" style="width:30vw;padding:0.6rem">
+                        <button class="ui-btn ui-btn-block custom_btn">search</button>
+                    </div>
+                </div>
+                
+                
+                <!--현장명-->
+                <div>
+                    <input type="search" name="password" id="search" placeholder="search.."  value="" />
+                </div>
+                
+            </div>    
+            <!-- container -->
+            
+            <!--list-->
+            <div class="list_container" style="width:100vw;padding:2vw;">
+                <div class="list" style="position:absolute;bottom:0;width:94vw;font-size: 0.7rem;overflow: scroll;padding:0">
+                
+                    <!-- sample -->
+                    <div style="border:1px solid #ccc ;margin-bottom:.5rem">
+                    <div style="padding:1rem 1rem 0 1rem;">
+                        <div style="width: 1rem; height: 1rem; background-image: url(../img/gear.svg); background-repeat: no-repeat;background-position: center;float:left"></div>
+                        <span style="color: #aaa;margin-left:0.5em;height:1rem;line-height: 1rem;font-size: 1em;float:left">ERROR-8957</span>
+                        <span style="color: #aaa;float:right">2023-10-31 15:23:34</span>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div style="padding:0 1rem 0.5rem 1rem;">
+                        <span style="color: #aaa;">Jeju_HK**[Tamara]>WTG007</span>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div style="background-color:#d6dbee; text-align: center; line-height: 2rem;">
+                        Work Order
+                    </div>
+                    </div>
+                    <!-- sample-->
+                    <!-- sample -->
+                    <div style="border:1px solid #ccc ;margin-bottom:.5rem">
+                        <div style="padding:1rem 1rem 0 1rem;">
+                            <div style="width: 1rem; height: 1rem; background-image: url(../img/gear.svg); background-repeat: no-repeat;background-position: center;float:left"></div>
+                            <span style="color: #aaa;margin-left:0.5em;height:1rem;line-height: 1rem;font-size: 1em;float:left">ERROR-8957</span>
+                            <span style="color: #aaa;float:right">2023-10-31 15:23:34</span>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div style="padding:0 1rem 0.5rem 1rem;">
+                            <span style="color: #aaa;">Jeju_HK**[Tamara]>WTG007</span>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div style="background-color:#d6dbee; text-align: center; line-height: 2rem;">
+                            Work Order
+                        </div>
+                        </div>
+                        <!-- sample-->
+                    <!-- sample -->
+                    <div style="border:1px solid #ccc ;margin-bottom:.5rem">
+                        <div style="padding:1rem 1rem 0 1rem;">
+                            <div style="width: 1rem; height: 1rem; background-image: url(../img/gear.svg); background-repeat: no-repeat;background-position: center;float:left"></div>
+                            <span style="color: #aaa;margin-left:0.5em;height:1rem;line-height: 1rem;font-size: 1em;float:left">ERROR-8957</span>
+                            <span style="color: #aaa;float:right">2023-10-31 15:23:34</span>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div style="padding:0 1rem 0.5rem 1rem;">
+                            <span style="color: #aaa;">Jeju_HK**[Tamara]>WTG007</span>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div style="background-color:#d6dbee; text-align: center; line-height: 2rem;">
+                            Work Order
+                        </div>
+                        </div>
+                        <!-- sample-->
+                    <!-- sample -->
+                    <div style="border:1px solid #ccc ;margin-bottom:.5rem">
+                        <div style="padding:1rem 1rem 0 1rem;">
+                            <div style="width: 1rem; height: 1rem; background-image: url(../img/gear.svg); background-repeat: no-repeat;background-position: center;float:left"></div>
+                            <span style="color: #aaa;margin-left:0.5em;height:1rem;line-height: 1rem;font-size: 1em;float:left">ERROR-8957</span>
+                            <span style="color: #aaa;float:right">2023-10-31 15:23:34</span>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div style="padding:0 1rem 0.5rem 1rem;">
+                            <span style="color: #aaa;">Jeju_HK**[Tamara]>WTG007</span>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div style="background-color:#d6dbee; text-align: center; line-height: 2rem;">
+                            Work Order
+                        </div>
+                        </div>
+                        <!-- sample-->
+                    <!-- sample -->
+                    <div style="border:1px solid #ccc ;margin-bottom:.5rem">
+                        <div style="padding:1rem 1rem 0 1rem;">
+                            <div style="width: 1rem; height: 1rem; background-image: url(../img/gear.svg); background-repeat: no-repeat;background-position: center;float:left"></div>
+                            <span style="color: #aaa;margin-left:0.5em;height:1rem;line-height: 1rem;font-size: 1em;float:left">ERROR-8957</span>
+                            <span style="color: #aaa;float:right">2023-10-31 15:23:34</span>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div style="padding:0 1rem 0.5rem 1rem;">
+                            <span style="color: #aaa;">Jeju_HK**[Tamara]>WTG007</span>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div style="background-color:#d6dbee; text-align: center; line-height: 2rem;">
+                            Work Order
+                        </div>
+                        </div>
+                        <!-- sample-->                                                                                            
+                                                                                              
+                 
+                </div>
+            </div>
+
+    
+   
+    <!-- nav menu -->
+    <div id="nav_menu">
+        
+        <a href="#" onclick="close_menu()"><div class="arrow_back" style="width:20vw;margin-left:1.5;height:3rem;"></div></a>
+        <a href="#" onclick="gotoPage('page01')">
+        <div class="ui-grid-a menu_btn2 ui-btn-active">
+            <div class="ui-block-a " style="width: 10vw;"><div class="page01" ></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>Main View</span></div>
+        </div>
+        </a>
+        <a href="#" onclick="gotoPage('page02')">
+        <div class="ui-grid-a menu_btn2 ui-btn-active">
+            <div class="ui-block-a " style="width: 10vw;"><div class="page02"></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>가동율/이용률 현황</span></div>
+        </div>
+        </a>
+        <a href="#" onclick="gotoPage('page03')">
+        <div class="ui-grid-a menu_btn2 ui-btn-active" style="background-color: #d0ebff;">
+            <div class="ui-block-a " style="width: 10vw;"><div class="page03"></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>Alarm현황</span></div>
+        </div>
+        </a>
+        <a href="#" onclick="gotoPage('page04')">
+        <div class="ui-grid-a menu_btn2 ui-btn-active">
+            <div class="ui-block-a " style="width: 10vw;"><div class="page04"></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>발전량</span></div>
+        </div>
+        </a>
+        <a href="#" onclick="gotoPage('page05')">
+        <div class="ui-grid-a menu_btn2 ">
+            <div class="ui-block-a " style="width: 10vw;"><div class="page05"></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;width:55vw"><span>Remote Service(Case현황)</span></div>
+        </div>
+        </a>
+        
+    </div>
+    <script>
+    function CalculToday(){
+        var date = new Date();
+        return date.getFullYear() + "-" + ("0" + (date.getMonth()+1)).slice(-2) + "-" + ("0" + date.getDate()).slice(-2);
+    }
+
+    var tod = CalculToday();
+    
+    $('#fromDate').val(tod);
+    $('#toDate').val(tod);
+</script>
+</body>
+</html>

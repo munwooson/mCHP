@@ -1,0 +1,155 @@
+
+body{
+    background-color: #f7f7f7;
+}
+
+.page_header{
+    background-color: #0058c2; width:100vw;height:3rem;margin:0;padding:0;top:0;
+    border:none;
+    }
+
+.page_logo{
+    width:30vw; height:3rem;margin-left:1rem;
+    background:url(../img/img_logo.png) center / contain no-repeat;
+}    
+
+.page_content{
+    margin:0;top:0;
+    padding:0 0.3em;
+}
+
+/*
+select {
+  width: 200px;
+  padding: 5px;
+  border:1px solid #999;
+  font-family: inherit;
+  background: url(../img/bottom_arrow.svg) no-repeat 95% 50%;  
+  border: 1px solid #999;
+  border-radius: 0px;
+  -webkit-appearance: :none;
+  -moz-appearance:none;
+  appearance:none;
+}
+
+select::-ms-expand { /* for IE 11 
+    display: none;
+}
+*/
+
+.sub_grid{
+    position:absolute;bottom:0;height:55vh;width:100vw;padding:2vw;top:45vh
+}
+
+.ui-select{
+    width:200px;
+    height:70px;
+}
+
+.custom_btn{
+    outline: none !important;text-shadow: none !important;box-shadow: none !important;margin:auto;margin-left: 1rem;
+     padding:0;height:2.5rem !important;width: 5rem !important;background-color: #005eb8 !important;color: #fff !important;font-weight: normal;font-size: 1rem;
+}
+
+
+.page_close{
+    width:2rem; height:2rem;margin-right:0.5rem;
+    background:url(../img/close.svg) center / contain no-repeat;
+    background-size: 1.5rem 1.5rem;
+}    
+
+.page_tab{
+    padding:0.5em;text-align: center; font-weight: bold;
+}
+/* .page_tab:focus{
+    background-color:none ;color:none;
+  } */
+/* .page_tab:hover{
+    background-color: #0058c2 ;color:#fff
+} */
+
+.list_container{
+    margin:0;
+    padding:0 0.3em;
+}
+.list{
+    border: 1px solid #eee;position:absolute;bottom:0;overflow: scroll;padding:0;width:97%;
+    border-radius: .3em; margin:0;
+}
+.page_card{
+    background-color: #FFF;margin:.5em 0;border:1px solid #777; border-radius: .3em;background-color: #EEE;
+}
+
+.page_card2{
+    padding:1em;background-color: #FFF;margin:.5em 0;border-radius: .7em;
+}
+
+.page_card3{
+    padding:1em;background-color: #FFF;margin:.5em 0;border-radius: .7em;border:1px solid #333
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #222;
+}
+
+ul {
+  font-size: 0;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  margin: 0px auto;
+  user-select: none;
+}
+
+li {
+  display: inline-block;
+  width: 33.3%;
+  height: 3em;
+  background: #1E88E5;
+  font-size: 16px;
+  text-align: center;
+  line-height: 3em;
+  color: #FFF;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slider {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #E3F2FD;
+  transition: all 0.5s;
+}
+/*  Ripple */
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+
+.rippleEffect {
+  animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

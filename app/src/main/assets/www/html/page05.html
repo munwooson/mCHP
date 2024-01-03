@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="img-src * blob: android-webview-video-poster: cdvphotolibrary:  'self' data: ws: wss://*; default-src * blob: 'self' gap: wss: ws: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src * http: https: ws: wss://*;">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <title>Doosan Enerbility</title>
+
+    <link rel="stylesheet" type="text/css" href="../js/jquery-mobile/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/page.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="../js/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript"
+            src="../js/jquery-ui-1.12.1/jquery.uitouch-punch.min.js"></script>
+    <script type="text/javascript" src="../js/commonUtil.js"></script>
+    <script type="text/javascript" src="../js/oracle/mcs.js"></script>
+    <script type="text/javascript" src="../js/oracle/mcsConfig.js"></script>
+    <script type="text/javascript" src="../js/pagefunction.js"></script>
+    <script type="text/javascript" src="../js/radial-progress-bar.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="../js/chart3.5.1.js"></script>
+
+</head>
+
+<body bgproperties="fixed">
+    <div id="cover"></div>
+            <!--header-->
+            <div class="page_header">
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">
+                        <div class="page_logo"></div>
+                    </div>
+                    <div class="ui-block-b"></div>
+                    <div class="ui-block-c"></div>
+                    <div class="ui-block-d" style="padding:0.3rem">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <!-- <div class="setting"></div> -->
+                            </div>
+                            <div class="ui-block-b"><div class="menu"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--header-->
+
+            <!-- container -->
+            <div class="page_content" style="height: auto;">
+                <div>
+
+                    <div class="ui-grid-c" style="width:100vw">
+                        <div class="ui-block-a" style="width:30vw;">
+                            <input type="text" name="text-1" id="search" data-role="none" value="2023년" style="margin:0.8rem 0;height: 1.8rem;width: 99%;padding-left: 0.5rem !important;border:1px solid #ccc"/>
+                        </div>
+                        <div class="ui-block-b" style="width:5vw"></div>
+                        <div class="ui-block-c" style="width:20vw;">
+                            <input type="text" name="text-1" id="search" data-role="none" value="4월" style="margin:0.8rem 0;height: 1.8rem;width: 99%;padding-left: 0.5rem !important;border:1px solid #ccc"/>
+                        </div>
+                        <div class="ui-block-d" style="width:20vw">
+                            <div style="margin:1rem;width: 2rem; height: 2rem; background-image: url(../img/search.svg); background-repeat: no-repeat;background-position: center;"></div>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+                <!--그래프-->
+                <div>
+                    <canvas id="chart01" height="200px"></canvas>
+                </div>
+                <!--그래프-->
+                <div style="background-color: #5b9bd5;color:#fff;font-size: .8rem;">
+                    <div class="ui-grid-b" style="border-bottom: 1px solid #fff;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;">Case No.</div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;">Alarm No.</div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;">Site</div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;">Turbine</div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;">내용</div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;">등록일</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>    
+            <!-- container -->
+            
+            <!--list-->
+            <div class="list_container" style="width:100vw;padding:2vw;">
+                <div class="list" style="position:absolute;bottom:0;width:95vw;font-size: 0.7rem;overflow: scroll;padding:0">
+                   <!-- sample-->
+                   <div style="border-bottom: 1px solid #ccc;">
+                    <div class="ui-grid-b" style="border: 1px solid #fff;background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                             <div style="margin:auto;text-align: center;"> 1 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> t </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-b" style="background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                             <div style="margin:auto;text-align: center;"> tb </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> cont </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2023-01-01 </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- sample-->
+                <!-- sample-->
+                <div style="border-bottom: 1px solid #ccc;">
+                    <div class="ui-grid-b" style="border: 1px solid #fff;background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> t </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-b" style="background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> tb </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> cont </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2023-01-01 </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- sample-->     
+                <!-- sample-->
+                <div style="border-bottom: 1px solid #ccc;">
+                    <div class="ui-grid-b" style="border: 1px solid #fff;background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 3 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> t </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-b" style="background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> tb </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> cont </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2023-01-01 </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- sample-->       
+                <!-- sample-->
+                <div style="border-bottom: 1px solid #ccc;">
+                    <div class="ui-grid-b" style="border: 1px solid #fff;background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 4 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> t </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-b" style="background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> tb </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> cont </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2023-01-01 </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- sample-->                                                                                          
+                <!-- sample-->
+                <div style="border-bottom: 1px solid #ccc;">
+                    <div class="ui-grid-b" style="border: 1px solid #fff;background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 5 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2 </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> t </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-b" style="background-color: #eaeff7;">
+                        <div class="ui-block-a" style="padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> tb </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> cont </div>
+                        </div>
+                        <div class="ui-block-b" style="border-left:1px solid #fff;padding:0.5rem 0">
+                            <div style="margin:auto;text-align: center;"> 2023-01-01 </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- sample-->   
+
+
+                </div>                                                                                
+            </div>
+
+
+    <!-- nav menu -->
+    <div id="nav_menu">
+        
+        <a href="#" onclick="close_menu()"><div class="arrow_back" style="width:20vw;margin-left:1.5;height:3rem;"></div></a>
+        <a href="#" onclick="gotoPage('page01')">
+        <div class="ui-grid-a menu_btn2 ui-btn-active" >
+            <div class="ui-block-a " style="width: 10vw;"><div class="page01" ></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>Main View</span></div>
+        </div>
+        </a>
+        <a href="#" onclick="gotoPage('page02')">
+        <div class="ui-grid-a menu_btn2 ui-btn-active">
+            <div class="ui-block-a " style="width: 10vw;"><div class="page02"></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>가동율/이용률 현황</span></div>
+        </div>
+        </a>
+        <a href="#" onclick="gotoPage('page03')">
+        <div class="ui-grid-a menu_btn2 ui-btn-active">
+            <div class="ui-block-a " style="width: 10vw;"><div class="page03"></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>Alarm현황</span></div>
+        </div>
+        </a>
+        <a href="#" onclick="gotoPage('page04')">
+        <div class="ui-grid-a menu_btn2 ui-btn-active">
+            <div class="ui-block-a " style="width: 10vw;"><div class="page04"></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;"><span>발전량</span></div>
+        </div>
+        </a>
+        <a href="#" onclick="gotoPage('page05')">
+        <div class="ui-grid-a menu_btn2 ui-btn-active" style="background-color: #d0ebff;">
+            <div class="ui-block-a " style="width: 10vw;"><div class="page05"></div></div>
+            <div class="ui-block-b" style="line-height:2rem;margin-left:1rem;width:55vw"><span>Remote Service(Case현황)</span></div>
+        </div>
+        </a>
+        
+    </div>
+    <script>
+        var ctx = document.getElementById('chart01').getContext('2d');
+              var chart = new Chart(ctx, {
+                  type: 'bar', // 
+                  
+                  data: {
+                      labels: ['1월','2월','3월','4월'],
+                      datasets: [
+                        {
+                          label: '',
+                          data:[90,88,96,85],
+                          backgroundColor: [
+                            '#2976d2',
+                          ],
+                          borderColor: 'rgb(255, 99, 132)',
+                        },
+                        {
+                          label: '',
+                          data:[20,18,16,25],
+                          backgroundColor: [
+                            '#ed7e30',
+                          ],
+                          borderColor: 'rgb(255, 99, 132)',
+                        },
+
+                    
+                    ]
+                  },
+                  options: {
+                          scales: {
+                            x:{ //x축값 누적
+                                stacked:true
+                                ,ticks: {
+                                      fontSize : 8, 
+                                  }
+                            },
+                            y:{ //y축값 누적
+                                stacked:true
+                                ,ticks: {
+                                      min: 0,
+                                      max: 120,
+                                      fontSize : 5, 
+                                      stepSize: 10
+                                  }
+                            },
+                            
+                              },
+                          plugins:{
+                              legend: {
+                              display: false
+                                  },        
+                              }            
+                          },
+                
+                  
+              });
+    </script>      
+</body>
+</html>

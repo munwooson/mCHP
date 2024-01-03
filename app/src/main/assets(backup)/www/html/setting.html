@@ -1,0 +1,186 @@
+<div id="setting" data-role="page">
+        <div data-role='header' data-position="fixed" class="ui-shadow" data-hide-during-focus="" data-theme="a" style="border:none;background:#fff" data-tap-toggle="false">
+            <img src="../img/doosan.jpg" width="60px" class="ui-btn ui-btn-left" style="padding:0px 0px;border:none">
+            <h1>환경 설정</h1>
+            <a href="#" onclick="onBackKeyDown()" class="ui-btn ui-btn-right" style="text-shadow:none;padding:5px !important;margin:1px !important;background:none !important;border:none !important"><img src="../img/back.png" width="25px"></a>
+            <!--<a href="#" onclick="onBackKeyDown()" class="ui-btn ui-btn-right ui-btn-icon-right ui-icon-carat-l ui-btn-inline ui-btn-icon-notext" style="background:#37474F;color:#fff;text-shadow:none;border-radius:5px">back</a>-->
+        </div>
+
+    <!-- 본문 시작 -->
+    <div role="main" class="content">
+
+            <!--리스트
+            <ul data-role="listview" data-divider-theme="a" data-inset="true" style="background:#eee">
+                <div id="log_list"></div>
+            </ul>
+             리스트-->
+        <div id="container" style="padding:5px">
+
+            <!-- 리스트 환경 설정 -->
+
+            <table style="border:1px solid #90A4AE;;margin-top:10px">
+                <tr>
+                    <td colspan="2" style="background:#E0E0E0;padding:7px">
+                        <h4 style="margin:5px !important">화면 설정</h4>
+                    </td>
+                </tr>
+                <tr style="border-bottom:0.1px solid #EEEEEE;">
+                    <td width="40%" style="padding:5px;border-right:0.1px solid #EEEEEE">
+                        아이콘 표시
+                    </td>
+                    <td width="60%" style="padding:5px;">
+                        <img src="../img/switch_on.png" id="setting_icon_select" width="70px" onclick="icon_display3()">
+                    </td>
+                </tr>
+                <tr style="border-bottom:0.1px solid #EEEEEE;">
+                    <td width="40%" style="padding:5px;border-right:0.1px solid #EEEEEE">
+                        위치 표시
+                    </td>
+                    <td width="60%" style="padding:5px;">
+                        <img src="../img/switch_on.png" id="setting_location_select" width="70px" onclick="location_display3()">
+                    </td>
+                </tr>
+                <tr style="border-bottom:0.1px solid #EEEEEE;">
+                    <td width="40%" style="padding:5px;border-right:0.1px solid #EEEEEE">
+                        연속 스캔 모드
+                    </td>
+                    <td width="60%" style="padding:5px;">
+                        <img src="../img/switch_off.png" id="setting_auto_scan_select" width="70px" onclick="setting_auto_scan()">
+                    </td>
+                </tr>
+                <tr style="border-bottom:0.1px solid #EEEEEE;">
+                    <td width="40%" style="padding:5px;border-right:0.1px solid #EEEEEE">
+                        사용자 설정
+                    </td>
+                    <td width="60%" style="padding:5px;">
+                        <img src="../img/switch_user_off.png" id="setting_inout_user_select" width="70px" onclick="setting_inout_user()">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="40%" style="padding:5px;border-right:0.1px solid #EEEEEE">
+                        글씨 크기
+                    </td>
+                    <td width="60%" style="padding:5px;">
+                        <div id="setting_slider">
+                            <div id="setting_custom-handle" class="ui-slider-handle"></div>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+
+            <!-- 리스트 환경 설정 -->
+
+
+            <!--부서 검색 변경 -->
+
+            <table style="border:1px solid #90A4AE;margin-top:20px">
+                <tr>
+                    <td colspan="3" style="background:#E0E0E0;padding:7px">
+                        <h4 style="margin:5px !important">부서 검색 및 변경</h4>
+                    </td>
+                </tr>
+                <tr style="border-bottom:0.1px solid #EEEEEE;">
+                    <td width="40%" style="padding:0px 10px !important">
+                        <input type="text" name="setting_search_dept_code" data-role="none" id="setting_search_dept_code" value="" placeholder="부서 코드" style="outline:none !important;border:0.1px solid #78909C !important;border-radius:0px !important;padding:7px;width:100%" onkeypress="submit_keyboard(event)">
+                    </td>
+                    <td width="40%" style="padding:0px 25px 0px 10px;">
+                        <input type="text" name="setting_search_dept_name" data-role="none" id="setting_search_dept_name" value="" placeholder="부서 명" style="outline:none !important;border:0.1px solid #78909C !important;border-radius:0px !important;padding:7px;width:100%" onkeypress="submit_keyboard(event)">
+                    </td>
+                    <td width="20%" style="padding-right:10px;">
+                        <button class="ui-btn ui-btn-block ui-corner-all" style="border:1px solid #37474F;color:#37474F;border-radius:0px;margin:0px;height:38px;line-height:12px" onclick="getListTeam()">검 색</button>
+                    </td>
+                </tr>
+                <tr style="border:0.1px solid #CFD8DC">
+                    <td colspan="2" style="padding-right:20px;">
+                        <select id="setting_dept_list" name="main_search_popup_account_code" data-role="none" style="padding:10px;margin:2px 10px;outline:none;width:100%;background:none;color:#78909C;border:0.1px solid #78909C">
+                            <option value="">부서 검색후 선택가능</option>
+                        </select>
+                    </td>
+                    <td style="padding-right:10px;">
+                        <button class="ui-btn ui-btn-block ui-corner-all" style="border:1px solid #37474F;color:#37474F;border-radius:0px;margin:0px;height:38px;line-height:12px" onclick="selectTeam()">변 경</button>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="border:1px solid #90A4AE;margin-top:20px">
+                <tr>
+                    <td colspan="2" style="background:#E0E0E0;padding:7px">
+                        <h4 style="margin:5px !important">사용자 정보</h4>
+                    </td>
+                </tr>
+                <tr style="border-bottom:0.1px solid #EEEEEE;">
+                    <td width="40%" style="padding:10px;border-right:0.1px solid #EEEEEE">
+                        부서
+                    </td>
+                    <td width="60%" id="setting_dept_nm" style="padding:10px;"></td>
+                </tr>
+                <tr style="border-bottom:0.1px solid #EEEEEE;">
+                    <td width="40%" style="padding:10px;border-right:0.1px solid #EEEEEE">
+                        아이디
+                    </td>
+                    <td width="60%" id="setting_user_id" style="padding:10px;"></td>
+                </tr>
+                <tr style="border-bottom:0.1px solid #EEEEEE;">
+                    <td width="40%" style="padding:10px;border-right:0.1px solid #EEEEEE">
+                        이름
+                    </td>
+                    <td width="60%" id="setting_user_nm" style="padding:10px;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button class="ui-btn ui-btn-block ui-corner-all" style="border:1px solid #37474F;color:#37474F;border-radius:0px;width:40%" onclick="logout()">로그아웃</button>
+                    </td>
+                </tr>
+            </table>
+
+            <!--부서 검색 변경 -->
+
+            <!-- 글씨조정
+            <div class="ui-grid-a" style="width:100%;background:#fff;padding:5px">
+                <div class="ui-block-a" style="width:40%;padding:10px;border-right:1px solid #ECEFF1">
+                    글씨크기조정
+                </div>
+                <div class="ui-block-b" style="width:60%;padding:10px;border-right:1px solid #ECEFF1">
+                    <div id="slider">
+                        <div id="custom-handle" class="ui-slider-handle"></div>
+                    </div>
+                </div>
+            </div>
+ -->
+
+
+        </div>
+
+
+
+    </div>
+    <!-- 본문 끝 -->
+
+    <!-- footer -->
+    <div data-role="footer" data-position="fixed" data-hide-during-focus="" data-tap-toggle="false" role="contentinfo"
+         class="footer_btn"><center>
+        <div class="ui-grid-c" style="width:100%;background:#fff;">
+            <!--div class="ui-block-a" style="width:25%;padding:10px">
+                <img src="../img/btn01.png" class="main_bottom" width="30px" onclick="bottom_btn_main()">
+            </div-->
+            <div class="ui-block-a" style="width:25%;padding:10px">
+                <img src="../img/btn01.png" class="main_bottom" width="30px" onclick="goMain()">
+            </div>
+            <div class="ui-block-b" style="width:25%;padding:10px">
+                <img src="../img/btn02.png" class="qr_bottom" width="30px" onclick="bottom_btn_qr()">
+            </div>
+            <div class="ui-block-c" style="width:25%;padding:10px">
+                <img src="../img/btn03.png" class="monitoring_bottom" width="30px" onclick="bottom_btn_monitor()">
+            </div>
+            <div class="ui-block-d" style="width:25%;padding:10px">
+                <img src="../img/btn044.png" class="setting_bottom" width="30px" onclick="bottom_btn_setting()">
+            </div>
+        </div>
+    </center>
+    </div>
+    <!-- footer -->
+
+
+</div>
+

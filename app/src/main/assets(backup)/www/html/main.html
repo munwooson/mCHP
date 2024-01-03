@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="img-src * blob: android-webview-video-poster: cdvphotolibrary:  'self' data: ws: wss://*; default-src * blob: 'self' gap: wss: ws: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src * http: https: ws: wss://*;">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <title>DAI_mobile</title>
+
+    <script type="text/javascript" src="../cordova.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/jquery-mobile/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <!--<link rel="stylesheet" type="text/css" href="../js/morris.js-0.5.1/morris.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="../js/jquery.flipster.min.css">-->
+
+
+    <script type="text/javascript" src="../js/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery.uitouch-punch.min.js"></script>
+
+    <script type="text/javascript" src="../js/util.js"></script>
+    <script type="text/javascript" src="../js/oracle/mcs.js"></script>
+    <script type="text/javascript" src="../js/oracle/mcsConfig.js"></script>
+
+    <script type="text/javascript" src="../js/main_index.js"></script>
+    <script type="text/javascript" src="../js/pagefunction.js"></script>
+
+    <!--<script type="text/javascript" src="../js/morris.js-0.5.1/raphael.min.js"></script>-->
+    <!--<script type="text/javascript" src="../js/morris.js-0.5.1/morris.js"></script>-->
+    <script type="text/javascript" src="../js/radial-progress-bar.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazyload.min.js"></script>
+
+
+    <!--<script type="text/javascript" src="../js/jquery.flipster.min.js"></script>-->
+    <!--<script type="text/javascript" src="../js/jquery.mCustomScrollbar.js"></script>-->
+
+
+</head>
+
+<body bgproperties="fixed">
+
+<div id="mask"></div>
+<div id="spinner"></div>
+<section id="main" data-role="page">
+    <div data-role='header' class="ui-shadow" data-position="fixed" data-hide-during-focus="" data-theme="a" style="border:none;background:#fff" data-tap-toggle="false">
+        <img src="../img/doosan.jpg" width="60px" class="ui-btn ui-btn-left"
+             style="padding:0px 0px;border:none">
+        <h1>자산 실사 디지털</h1>
+        <a href="#" onclick="onBackKeyDown()" class="ui-btn ui-btn-right" style="text-shadow:none;padding:5px !important;margin:1px !important;background:none !important;border:none !important"><img src="../img/back.png" width="25px"></a>
+        <div style="border-top:1px solid #9E9E9E">
+        <table width="95%" style="margin:2px">
+          <tr>
+             <!--<th width="20%" align="center"><span style="font-size:10px;margin:0px;padding:0px">아이콘표시</span>-->
+                <!--<img src="../img/switch_on.png" id="main_icon_select" width="70px" onclick="icon_display()">-->
+            <!--</th>-->
+            <th width="50%" align="center">
+                <!--<a href="#" class="ui-btn ui-btn-block" onclick="popup_main_open()" style="height:1.0em;line-height:1.0em;margin:2px;border:1px solid #37474F;color:#37474F;border-radius:5px;">조건검색</a>-->
+                <!--<input type="search" readonly="true" placeholder="검색조건" onclick="popup_main_open()" data-role="none" style="padding:7px;margin:2px;width:100%;outline:none;border:0.1px solid #78909C"/>-->
+                <div onclick="popup_main_open()" style="padding:7px;margin:2px;width:100%;outline:none;border:0.1px solid #78909C;color:#78909C;font-weight:normal">검색 조건</div>
+            </th>
+            <th width="30%" align="center">
+                <select id="main_list_count_select" name="main_list_count_select" data-role="none" style="padding:7px;margin:2px;outline:none;color:#78909C;background:none;border:0.1px solid #78909C;border-radius:0">
+                    <!--padding:7px;margin:2px;outline:none;border-radius:5px;background:#78909C;color:#fff;border:none-->
+                    <option value="100" selected>100</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="9999">전체</option>
+                </select>
+            </th>
+              <!--
+              메인 리스트 조정패널
+              <th width="20%" align="center">
+                  <img src="../img/setting.png" width="25px" onclick="popup_setting_open()" style="margin:3px;margin-top:5px">
+              </th>
+              -->
+              <!--<input type="checkbox" data-role="flipswitch" name="main_location_select" id="main_location_select" data-mini="true">-->
+            <!--<th width="20%" align="center"><span style="font-size:10px;margin:0px;padding:0px">위치표시</span>-->
+                <!--<img src="../img/switch_off.png" id="main_location_select" width="70px" onclick="location_display()">-->
+            <!--</th>-->
+            <th width="20%" align="right">
+                <button class="ui-btn ui-btn-block" style="text-shadow:none;padding:2px !important;margin:1px !important;margin-right:10px !important;background:none !important;border:none !important" onclick="desc_sort()"><img src="../img/sort_up.png" id="main_desc_sort_btn" width="25px"></button>
+            </th>
+          </tr>
+        </table>
+        </div>
+
+
+    </div>
+    <!-- 본문 시작 -->
+    <div role="main" class="content">
+            <!--<li>-->
+    <ul data-role="listview" data-divider-theme="a" data-inset="true" style="background:#eee;" id="main_list">
+    <!--<table>-->
+                    <!--<tr>-->
+                        <!--<td rowspan="2" width="20%"><img src="../img/img01.png"></td>-->
+                        <!--<td colspan="2" width="40%">아이템번호</td>-->
+                        <!--<td width="30%">아이템유형</td>-->
+                        <!--<td rowspan="2" width="10%" align="center"><div style="width:20px;height:20px;background:#9E9E9E;border-radius:10px;"></div></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+            <!--<td colspan="2" width="70%">아이템명</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+            <!--</li>-->
+        </ul>
+    </div>
+
+    <!-- footer -->
+    <div data-role="footer" data-position="fixed" data-hide-during-focus="" data-tap-toggle="false" role="contentinfo" class="footer_btn"><center>
+           <div class="ui-grid-c" style="width:100%;background:#fff;">
+                <div class="ui-block-a" style="width:25%;padding:10px">
+                    <img src="../img/btn011.png" class="main_bottom" width="30px" onclick="bottom_btn_main()">
+                </div>
+               <div class="ui-block-b" style="width:25%;padding:10px">
+                   <img src="../img/btn02.png" class="qr_bottom" width="30px" onclick="bottom_btn_qr()">
+               </div>
+               <div class="ui-block-c" style="width:25%;padding:10px">
+                   <img src="../img/btn03.png" class="monitoring_bottom" width="30px" onclick="bottom_btn_monitor()">
+               </div>
+               <div class="ui-block-d" style="width:25%;padding:10px">
+                   <img src="../img/btn04.png" class="setting_bottom" width="30px" onclick="bottom_btn_setting()">
+               </div>
+            </div>
+        </center>
+    </div>
+    <!-- footer -->
+
+    <!-- popup -->
+    <div data-role="popup" id="main_search_popup" data-theme="a" style="width:100%;position:fixed;top:10%">
+        <div style="position:relative;text-align:right;z-index:1000">
+            <div style="text-align:right;float:right"><img src="../img/x2.png" width="25px" onclick="popup_main_close()" style="margin:0px 0px;padding:0px;margin:13px"></div>
+            <!--<a href="#" onclick="popup_main_close()" data-role="button" style="margin:0px 0px;padding:0px;background:#000;margin:10px" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-inline">닫기</a></div>-->
+        </div>
+        <div style="position:relative;text-align:center;border-bottom:0.1px solid #37474F">
+                <h3 style="padding:5px;margin:10px" id="main_search_popup_title">검색 조건</h3>
+        </div>
+        <!-- input -->
+        <table width="100%" style="width:100%;margin:0px 0px;text-align:right;border-bottom:1px solid #B0BEC5;border:none !important; margin-bottom:0px">
+            <tr>
+                <th style="padding:0px 10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    자산번호
+                </th>
+                <th style="padding:0px;border:1px solid #FAFAFA" width="50%">
+                    <!--<input type="text" name="main_search_popup_asset_no" id="main_search_popup_asset_no" value="" placeholder="자산번호"/>-->
+                    <input type="number" name="main_search_popup_asset_no" id="main_search_popup_asset_no" value="" placeholder="자산번호" style="outline:none !important; border:none !important;border-radius:0px !important;" onkeypress="submit_keyboard(event)">
+                </th>
+            </tr>
+            <tr>
+                <th style="padding:0px 10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    자 산 명
+                </th>
+                <th style="padding:0px;border:1px solid #FAFAFA" width="50%">
+                    <input type="text" name="main_search_popup_asset_name" id="main_search_popup_asset_name" value="" placeholder="자산명" style="outline:none !important; border:none !important; border-radius:0px !important;" onkeypress="submit_keyboard(event)">
+                    <!--<input type="text" name="main_search_popup_asset_name" id="main_search_popup_asset_name" value="" placeholder="자산명"/>-->
+                </th>
+            </tr>
+            <tr>
+                <th style="padding:0px 10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    전년 실사자
+                </th>
+                <th style="padding:0px;border:1px solid #FAFAFA" width="50%">
+                    <input type="text" name="main_search_popup_counter_name" id="main_search_popup_counter_name" value="" placeholder="전년 실사자" style="outline:none !important; border:none !important; border-radius:0px !important;" onkeypress="submit_keyboard(event)">
+                    <!--<input type="text" name="main_search_popup_asset_name" id="main_search_popup_asset_name" value="" placeholder="자산명"/>-->
+                </th>
+            </tr>
+            <tr>
+                <th style="padding:0px 10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    위 치
+                </th>
+                <th style="padding:0px;border:1px solid #FAFAFA" width="50%">
+                    <input type="text" name="main_search_popup_location" id="main_search_popup_location" value="" placeholder="위 치" style="outline:none !important; border:none !important; border-radius:0px !important;" onkeypress="submit_keyboard(event)">
+                    <!--<input type="text" name="main_search_popup_asset_name" id="main_search_popup_asset_name" value="" placeholder="자산명"/>-->
+                </th>
+            </tr>
+            <tr>
+                <th style="padding:0px 10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    실사여부
+                </th>
+                <th style="padding:0px;border:1px solid #FAFAFA;" width="50%" align="left">
+                    <select id="main_search_popup_inspection_flag" name="main_search_popup_inspection_flag" data-role="none" style="padding:10px;margin:10px;outline:none;width:90%;background:none;color:#78909C;border:0.1px solid #78909C">
+                        <option value="">모든유형</option>
+                        <option value="Y">실사</option>
+                        <option value="N">미실사</option>
+                    </select>
+                </th>
+            </tr>
+
+            <tr>
+                <th style="padding:0px 10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    자산유형
+                </th>
+                <th style="padding:0px;border:1px solid #FAFAFA;" width="50%" align="left">
+                    <select id="main_search_popup_account_code" name="main_search_popup_account_code" data-role="none" style="padding:10px;margin:10px;outline:none;width:90%;background:none;color:#78909C;border:0.1px solid #78909C">
+                        <option value="">모든유형</option>
+                        <option value="건물">건물</option>
+                        <option value="구축물">구축물</option>
+                        <option value="기계장치">기계장치</option>
+                        <option value="중장비">중장비</option>
+                        <option value="차량운반구">차량운반구</option>
+                        <option value="공기구">공기구</option>
+                        <option value="비품">비품</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th style="padding:0px 10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    정렬항목
+                </th>
+                <th style="padding:0px;border:1px solid #FAFAFA;" width="50%" align="left">
+                    <select id="main_order_select" name="main_order_select" data-role="none" style="padding:10px;margin:10px;outline:none;width:90%;background:none;color:#78909C;border:0.1px solid #78909C">
+                        <option value="asset_num">자산번호</option>
+                        <option value="location">위치</option>
+                        <option value="asset_name">자산명</option>
+                        <option value="account_name">자산유형</option>
+                        <option value="inspection_flag">실사여부</option>
+                    </select>
+                </th>
+            </tr>
+
+            <!--<tr>-->
+                <!--<th style="padding:0px 10px !important;border:1px solid #FAFAFA" width="50%" align="center">-->
+                    <!--장소 DISPLAY-->
+                <!--</th>-->
+                <!--<th style="padding:0px;border:1px solid #FAFAFA;" width="50%" align="center">-->
+                    <!--<input type="checkbox" data-role="flipswitch" name="main_location_select" id="main_location_select">-->
+                <!--</th>-->
+            <!--</tr>-->
+
+
+
+            <tr>
+                <th style="padding:0px 10px !important;border:1px solid #FAFAFA" width="50%">
+                    <a href="#" class="ui-btn ui-btn-block" onclick="main_search_popup_reset()" style="height:1.5em;line-height:1.5em;margin:5px;border:1px solid #37474F;color:#37474F;border-radius:0px;" id = "main_search_popup_reset_btn">초기화</a>
+                </th>
+                <th style="padding:0px 10px;border:1px solid #FAFAFA" width="50%">
+                    <a href="#" class="ui-btn ui-btn-block" onclick="main_search_popup_search()" style="height:1.5em;line-height:1.5em;margin:5px;border:1px solid #37474F;color:#37474F;border-radius:0px;" id = "main_search_popup_search_btn">검 색</a>
+                </th>
+            </tr>
+        </table>
+        <!-- input style="overflow:scroll"
+        <div id="main_popup_list_container">
+            <div id="main_popup_list"><div align="center" style="color:#ccc;padding:10px" id="main_popup_list_text"> </div></div>
+        </div>
+        -->
+    </div>
+    <!-- popup -->
+
+
+    <!--setting popup -->
+
+<!-- <a href="#prepacking_photo_tag_01_div" data-rel="popup" class="ui-btn ui-btn-icon-left ui-corner-all ui-icon-camera ui-btn-icon-notext"
+      data-transition="pop" style="margin:0px 0px;padding:0px;margin-top:2px">태그사진</a>
+   <div data-role="popup" id="prepacking_photo_tag_01_div">
+
+       <button onclick="prepacking_photo_camera(Camera.PictureSourceType.CAMERA, 0)"
+               style="margin:0px 0px;">촬영
+       </button>
+       <button onclick="prepacking_photo_camera(Camera.PictureSourceType.PHOTOLIBRARY, 0)"
+               style="margin:0px 0px;">앨범
+       </button>
+   </div>
+    -->
+   <div data-role="popup" id="main_setting_popup" data-theme="a" style="width:100%;position:fixed;top:10%;">
+       <div style="position:relative;text-align:right;z-index:1000">
+           <div style="text-align:right;float:right"><img src="../img/x2.png" width="25px" onclick="popup_setting_close()" style="margin:0px 0px;padding:0px;margin:13px"></div>
+           <!--<a href="#" onclick="popup_main_close()" data-role="button" style="margin:0px 0px;padding:0px;background:#000;margin:10px" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-inline">닫기</a></div>-->
+        </div>
+        <div style="position:relative;text-align:center;border-bottom:0.1px solid #37474F">
+            <h3 style="padding:5px;margin:10px" id="approval_setting_popup_title">목록 환경 설정</h3>
+        </div>
+        <!-- input -->
+        <table width="100%" style="width:100%;margin:0px 0px;text-align:right;border-bottom:1px solid #B0BEC5;border:none !important; margin-bottom:0px">
+            <tr>
+                <th style="padding:10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    아이콘표시
+                </th>
+                <th style="padding:10px;border:1px solid #FAFAFA" width="50%" align="center">
+                    <img src="../img/switch_off.png" id="main_icon_select" width="70px" onclick="icon_display()">
+                </th>
+            </tr>
+            <tr>
+                <th style="padding:10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    위치 표시
+                </th>
+                <th style="padding:10px;border:1px solid #FAFAFA" width="50%" align="center">
+                    <img src="../img/switch_off.png" id="main_location_select" width="70px" onclick="location_display()">
+                </th>
+            </tr>
+
+            <tr>
+                <th style="padding:10px !important;border:1px solid #FAFAFA" width="50%" align="center">
+                    글씨 크기
+                </th>
+                <th style="padding:10px 20px;border:1px solid #FAFAFA;" width="50%" align="center">
+                    <div id="slider">
+                        <div id="custom-handle" class="ui-slider-handle"></div>
+                    </div>
+                </th>
+            </tr>
+
+        </table>
+        <!-- input style="overflow:scroll"
+        <div id="main_popup_list_container">
+            <div id="main_popup_list"><div align="center" style="color:#ccc;padding:10px" id="main_popup_list_text"> </div></div>
+        </div>
+        -->
+    </div>
+    <!-- popup -->
+
+</section>
+</body>
+
+<script type="text/javascript">
+    $('#main_search_popup_asset_no').val(sessionStorage.getItem("asset_no"));
+    $('#main_search_popup_asset_name').val(sessionStorage.getItem("asset_name"));
+    $('#main_search_popup_inspection_flag').val(sessionStorage.getItem("inspection_flag")).prop("selected", true);
+    $('#main_search_popup_account_code').val(sessionStorage.getItem("account_name")).prop("selected", true);
+    $('#main_order_select').val(sessionStorage.getItem("order_select")).prop("selected", true);
+    $('#main_search_popup_location').val(sessionStorage.getItem("location"));
+    $('#main_search_popup_counter_name').val(sessionStorage.getItem("pre_year_counter"));
+</script>
+
+ 
+</html>
+
+
+<!--
+<a href="#" data-direction="none" data-rel="back"
+   class="ui-btn ui-btn-icon-left ui-icon-back ui-btn-icon-notext ui-btn-block ui-nodisc-icon" style="z-index:9999;position:fixed;right:10px;bottom:50px;background:#FF1744;border:1px solid #D50000;opacity:0.7;padding:10px;border-radius:30px;" id="special_back_btn">back</a>
+-->

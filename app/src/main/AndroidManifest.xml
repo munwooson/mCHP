@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.doosanenerbility.chp"
+    android:hardwareAccelerated="true"
+    android:versionCode="10000"
+    android:versionName="1.0.0">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        >
+        <activity
+            android:name="MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+            android:label="@string/activity_name"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter android:label="@string/launcher_name">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="org.apache.cordova.camera.FileProvider"
+            android:authorities="${applicationId}.cordova.plugin.camera.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/camera_provider_paths" />
+        </provider>
+        <provider
+            android:name="io.github.pwlin.cordova.plugins.fileopener2.FileProvider"
+            android:authorities="${applicationId}.fileOpener2.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/opener_paths" />
+        </provider>
+
+        <activity
+            android:name="com.sarriaroman.PhotoViewer.PhotoActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.google.zxing.client.android.encode.EncodeActivity"
+            android:label="Share" />
+    </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+</manifest>

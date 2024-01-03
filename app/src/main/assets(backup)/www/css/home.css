@@ -1,0 +1,30 @@
+html body{
+    margin:0;padding:0;
+    text-align: center;
+    line-height: 3em;
+    width:100vw;
+    height:100vh
+}
+.header{
+background-color: transparent; width:100vw;height:5vh;margin:0;padding:0;position:relative;top:0;
+
+}
+.content{
+    background-color: transparent; width:100vw;height:30vh;margin:0;padding:0;top:0;
+
+}
+
+.footer{
+    background-color:transparent;width:100vw;height:60vh;margin:0;padding:0;position:absolute;bottom:0
+    ;padding:1rem; overflow: scroll
+}
+
+.container{
+    background-image: url(bg.png); background-repeat: no-repeat;background-position: top; border-bottom-right-radius: 50%;
+    background-color: #999;
+}
+
+.menu_btn{
+    background-color: #fff;width: 90vw;height:3em;margin-bottom:1rem; border-radius: 0.5rem;border: 1px solid #ccc;
+    /*;opacity: 50%; */
+}

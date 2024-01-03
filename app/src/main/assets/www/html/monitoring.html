@@ -1,0 +1,79 @@
+<div id="monitoring" data-role="page" xmlns:height="http://www.w3.org/1999/xhtml" style="background:#fff">
+        <div data-role='header' data-position="fixed" class="ui-shadow" data-hide-during-focus="" data-theme="a" style="border:none;background:#fff" data-tap-toggle="false">
+            <img src="../img/doosan.jpg" width="60px" class="ui-btn ui-btn-left" style="padding:0px 0px;border:none">
+            <h1>실사 현황</h1>
+            <a href="#" onclick="onBackKeyDown()" class="ui-btn ui-btn-right" style="text-shadow:none;padding:5px !important;margin:1px !important;background:none !important;border:none !important"><img src="../img/back.png" width="25px"></a>
+            <div class="ui-grid-a" style="width:100%;background:#fff;">
+                <div class="ui-block-a" id="monitoring_top_btn01" style="width:50%;padding:10px;margin:0px;text-align:center;border-top:0.1px solid #ccc;border-bottom:0.1px solid #ccc !important" onclick="monitoring_change_page('dept')">부 서</div>
+                <div class="ui-block-b" id="monitoring_top_btn02"style="width:50%;padding:10px;margin:0px;text-align:center;border-top:0.1px solid #ccc;border-bottom:0.1px solid #ccc !important;" onclick="monitoring_change_page('all')">전 사</div>
+            </div>
+        </div>
+
+
+    <!-- 본문 시작 -->
+    <div role="main" class="content">
+
+        <div id="container" style="margin:5px;">
+
+            <div style="margin-top:20px;margin:auto 10px;text-align:center;width:100%" id="monitoring_01_pannel">
+                <h3 id="monitoring_all_name" style="font-size:18px">현황</h3>
+                <center>
+                <div id="monitoring_all_all_list" style="clear:both;text-align:center;width:100%">
+                </div>
+                <div id="monitoring_all_else_list1" style="clear:both;text-align:center;width:100%">
+                </div>
+                <div id="monitoring_all_else_list2" style="clear:both;text-align:center;width:100%">
+                </div>
+                <div id="monitoring_all_else_list3" style="clear:both;text-align:center;width:100%">
+                </div>
+                </center>
+                </div>
+
+            <!--<div style="clear:both;text-align:center;margin:auto 10px;margin-top:20px;display:none;width:100%" id="monitoring_02_pannel">-->
+                <!--<h3>전사 현황</h3>-->
+                <!--<center>-->
+                <!--<div id="monitoring_all_all_list" style="clear:both;text-align:center;width:100%">-->
+                <!--</div>-->
+                <!--<div id="monitoring_all_else_list" style="clear:both;text-align:center;width:100%">-->
+                <!--</div>-->
+                <!--<div id="monitoring_all_else_list2" style="clear:both;text-align:center;width:100%">-->
+                <!--</div>-->
+                <!--<div id="monitoring_all_else_list3" style="clear:both;text-align:center;width:100%">-->
+                <!--</div>-->
+                <!--</center>-->
+            <!--</div>-->
+
+        </div>
+
+
+
+
+
+    </div>
+    <!-- 본문 끝 -->
+
+    <!-- footer -->
+    <div data-role="footer" data-position="fixed" data-hide-during-focus="" data-tap-toggle="false" role="contentinfo"
+         class="footer_btn"><center>
+        <div class="ui-grid-c" style="width:100%;background:#fff;">
+            <div class="ui-block-a" style="width:25%;padding:10px">
+                <!--img src="../img/btn01.png" class="main_bottom" width="30px" onclick="bottom_btn_main()"-->
+                <img src="../img/btn01.png" class="main_bottom" width="30px" onclick="goMain()">
+            </div>
+            <div class="ui-block-b" style="width:25%;padding:10px">
+                <img src="../img/btn02.png" class="qr_bottom" width="30px" onclick="bottom_btn_qr()">
+            </div>
+            <div class="ui-block-c" style="width:25%;padding:10px">
+                <img src="../img/btn033.png" class="monitoring_bottom" width="30px" onclick="bottom_btn_monitor()">
+            </div>
+            <div class="ui-block-d" style="width:25%;padding:10px">
+                <img src="../img/btn04.png" class="setting_bottom" width="30px" onclick="bottom_btn_setting()">
+            </div>
+        </div>
+    </center>
+    </div>
+    <!-- footer -->
+
+
+</div>
+

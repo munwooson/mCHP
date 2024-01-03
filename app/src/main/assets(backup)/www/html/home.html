@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="img-src * blob: android-webview-video-poster: cdvphotolibrary:  'self' data: ws: wss://*; default-src * blob: 'self' gap: wss: ws: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src * http: https: ws: wss://*;">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <title>Doosan Enerbility</title>
+
+    <script type="text/javascript" src="../cordova.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/jquery-mobile/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/home.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../js/morris.js-0.5.1/morris.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="../js/jquery.flipster.min.css">-->
+
+
+    <script type="text/javascript" src="../js/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript"
+            src="../js/jquery-ui-1.12.1/jquery.uitouch-punch.min.js"></script>
+
+<!--    <script type="text/javascript" src="../js/util.js"></script>-->
+    <script type="text/javascript" src="../js/oracle/mcs.js"></script>
+    <script type="text/javascript" src="../js/oracle/mcsConfig.js"></script>
+
+<!--    <script type="text/javascript" src="../js/main_index.js"></script>-->
+    <script type="text/javascript" src="../js/pagefunction.js"></script>
+
+    <!--<script type="text/javascript" src="../js/morris.js-0.5.1/raphael.min.js"></script>-->
+    <!--<script type="text/javascript" src="../js/morris.js-0.5.1/morris.js"></script>-->
+    <script type="text/javascript" src="../js/radial-progress-bar.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazyload.min.js"></script>
+
+
+    <!--<script type="text/javascript" src="../js/jquery.flipster.min.js"></script>-->
+    <!--<script type="text/javascript" src="../js/jquery.mCustomScrollbar.js"></script>-->
+    <script type="text/javascript">setStopSpinner();</script>
+
+</head>
+
+<body bgproperties="fixed">
+
+<div id="mask"></div>
+<div id="spinner"></div>
+<section id="main" data-role="page" class="container">
+    <div data-role='header' class="header" data-hide-during-focus="" data-theme="a"
+         data-tap-toggle="false">
+        <img src="../img/doosan.jpg" width="60px" class="ui-btn ui-btn-left"
+             style="padding:0px 0px;border:none">
+        <h1>자산 실사 디지털</h1>
+
+
+    </div>
+    <!-- 본문 시작 -->
+    <div role="main" class="content">
+
+    </div>
+
+    <!-- footer -->
+    <div data-role="footer" data-hide-during-focus="" data-tap-toggle="false"
+         role="contentinfo" class="footer">
+        <center>
+            <div class="ui-grid-c" style="width:100%;background:#fff;">
+                <div class="ui-block-a" style="width:25%;padding:10px">
+                    <img src="../img/btn011.png" class="main_bottom" width="30px"
+                         onclick="bottom_btn_main()">
+                </div>
+                <div class="ui-block-b" style="width:25%;padding:10px">
+                    <img src="../img/btn02.png" class="qr_bottom" width="30px"
+                         onclick="bottom_btn_qr()">
+                </div>
+                <div class="ui-block-c" style="width:25%;padding:10px">
+                    <img src="../img/btn03.png" class="monitoring_bottom" width="30px"
+                         onclick="bottom_btn_monitor()">
+                </div>
+                <div class="ui-block-d" style="width:25%;padding:10px">
+                    <img src="../img/btn04.png" class="setting_bottom" width="30px"
+                         onclick="bottom_btn_setting()">
+                </div>
+            </div>
+        </center>
+    </div>
+    <!-- footer -->
+
+</section>
+</body>
+
+</html>

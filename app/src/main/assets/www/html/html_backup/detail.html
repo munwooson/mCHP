@@ -1,0 +1,268 @@
+<div id="detail" data-role="page">
+        <div data-role='header' data-position="fixed" class="ui-shadow" data-hide-during-focus="" data-theme="a" style="border:none;background:#fff" data-tap-toggle="false">
+            <img src="../img/doosan.jpg" width="60px" class="ui-btn ui-btn-left" style="padding:0px 0px;border:none">
+            <h1>자산 상세</h1>
+            <a href="#" onclick="onBackKeyDown()" class="ui-btn ui-btn-right" style="text-shadow:none;padding:5px !important;margin:1px !important;background:none !important;border:none !important"><img src="../img/back.png" width="25px"></a>
+            <!--<a href="#" onclick="onBackKeyDown()" class="ui-btn ui-btn-right ui-btn-icon-right ui-icon-carat-l ui-btn-inline ui-btn-icon-notext" style="background:#37474F;color:#fff;text-shadow:none;border-radius:5px">back</a>-->
+        </div>
+
+    <!-- 본문 시작 -->
+    <div role="main" class="content">
+
+            <!--리스트
+            <ul data-role="listview" data-divider-theme="a" data-inset="true" style="background:#eee">
+                <div id="log_list"></div>
+            </ul>
+             리스트-->
+        <div id="container" style="padding:5px;">
+            <table style="border:1px solid #90A4AE;">
+                <tr>
+                    <td colspan="2" style="background:#E0E0E0">
+                        <h4 style="margin:5px !important">자산 정보</h4>
+                    </td>
+                </tr>
+                <tr>
+                   <td width="40%">
+                       자산 번호
+                   </td>
+                    <td id="detail_asset_num_td" width="60%"></td>
+                </tr>
+                <tr>
+                    <td>
+                        자 산 명
+                    </td>
+                    <td id="detail_asset_name_td"></td>
+                </tr>
+                <tr>
+                    <td>
+                        부서
+                    </td>
+                    <td id="detail_dept_name_td"></td>
+                </tr>
+                <tr>
+                    <td>
+                        취득 일자
+                    </td>
+                    <td id="detail_asset_date_td"></td>
+                </tr>
+                <tr>
+                    <td onclick="detail_open_inner_table()">
+                     자산 수량<img src="../img/plus.png" id="detail_plus_btn" style="margin-left:10px;margin-bottom:-3px;width:20px">
+                    </td>
+                    <td id="detail_asset_quantity_td"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><div style="height:100%;display:none" id="detail_inner_table">
+                        <table style="background:#F5F5F5;border:1px dotted #607D8B;">
+                            <tr>
+                                <td width="40%">
+                                    실사 수량
+                                </td>
+                                <td width="60%">
+                                    <input type="number" id="detail_check_quantity_td" value="0" data-role="none" oninput='calcul_quantity(this)' onchange="input_zero(this)" style="outline:none !important; border:none; border:1px solid #ccc;width:3em;text-align:center;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    부족 수량
+                                </td>
+                                <td>
+                                    <input type="number" id="detail_lack_quantity_td" value="0" data-role="none" oninput='calcul_quantity(this)' onchange="input_zero(this)" style="outline:none !important; border:none; border:1px solid #ccc;width:3em;text-align:center;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    부족 사유
+                                </td>
+                                <td>
+                                    <textarea id="detail_lack_reason_ta" name="detail_lack_reason_ta" cols="40" rows="2" wrap="hard" oninput="text_area_calcul(this)" placeholder="부족 사유 입력" style="border:1px solid #ccc !important;border-radius:0px"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    불용 수량
+                                </td>
+                                <td>
+                                    <input type="number" id="detail_fire_dragon_quantity_td" value="0" oninput='calcul_quantity(this)' onchange="input_zero(this)" data-role="none" style="outline:none !important; border:none; border:1px solid #ccc;width:3em;text-align:center;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    불용 상태
+                                </td>
+                                <td>
+                                    <select id="detail_fire_dragon_condition_st" data-role="none" name="detail_fire_dragon_condition_st" onchange="detail_fire_dragon_select_func(this)" style="padding:10px;outline:none;width:100%;background:none;color:#78909C;border:0.1px solid #78909C">
+                                        <option value="">해당없음</option>
+                                        <option value="A">신 품</option>
+                                        <option value="B">중고품</option>
+                                        <option value="C">要 정비품</option>
+                                        <option value="D">폐 품</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    불용 사유
+                                </td>
+                                <td>
+                                    <textarea id="detail_fire_dragon_ta" name="detail_fire_dragon_ta" cols="40" rows="2" wrap="hard" oninput="text_area_calcul(this)" placeholder="불용 사유 입력" style="border:1px solid #ccc !important;border-radius:0px"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    비고
+                                </td>
+                                <td>
+                                    <textarea id="detail_etc_ta" name="detail_etc_ta" cols="40" rows="2" wrap="hard" placeholder="비고 입력" oninput="text_area_calcul(this)" style="border:1px solid #ccc !important;border-radius:0px"></textarea>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        자산 위치
+                    </td>
+                    <td>
+                        <input type="text" id="detail_LOCATION_td" onclick="detail_location_popup_open()" name="detail_LOCATION_td">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        실사자
+                    </td>
+                    <td id="detail_counter_td"></td>
+                </tr>
+                <tr id="detail_img_confirm_tr" style='display:none;background:#D7CCC8;color:#fff' onclick="getAssetPhoto('NEW')">
+                    <td colspan="2" align="center" style="padding:5px">
+                        + 등록된 사진이 있습니다.
+                    </td>
+                </tr>
+                <tr id="detail_img_tr" style="display:none;">
+                    <td>실사 사진
+                        <!--<img src="../img/x2.png" width="20px" onclick="detail_img_error()" style="margin:0px 0px;padding:0px;margin-left:5px;"><br>-->
+                    </td>
+                    <td><img onError="detail_img_error()" onclick="img_onclick()" id="detail_img_screen" width="100%"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <!--<div onclick="alert('tes')" style="padding: 15px;text-decoration:none;color:#CCC;display:inline-block;border-right:30px solid transparent;border-bottom: 50px solid #4c4c4c;height: 0;line-height: 60px;" id = "detail_survay_btn">사진 실사</div>-->
+                        <center>
+                         <div style="margin-top:10px">
+                        <a href="#" class="ui-btn ui-btn-inline" onclick="take_picture('camera')" style="height:1.5em;line-height:1.5em;color:#37474F;border:1px solid #37474F;border-radius:0px;width:30% !important;margin:2px !important;padding:7px 0px !important" id = "detail_survay_btn">사진 실사</a>
+                        <a href="#" class="ui-btn ui-btn-inline" onclick="detail_submit()" style="height:1.5em;line-height:1.5em;color:#37474F;border:1px solid #37474F;border-radius:0px;width:30% !important;margin:2px !important;padding:7px 0px !important" id = "detail_complete_btn">실사 완료</a>
+                        <a href="#" class="ui-btn ui-btn-inline" onclick="detail_cancel()" style="height:1.5em;line-height:1.5em;color:#37474F;border:1px solid #37474F;border-radius:0px;width:30% !important;margin:2px !important;padding:7px 0px !important" id = "detail_cancel_btn">실사 취소</a>
+                         </div>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+<br>
+            <table style="border:1px solid #90A4AE;border-radius:5px;" id="detail_survay_table">
+                <tr>
+                    <td colspan="4" style="background:#E0E0E0">
+                        <h4 style="margin:5px !important">실사 이력</h4>
+                    </td>
+                </tr>
+                <tr style="border-bottom:1px solid #ccc">
+                    <td align="center" width="15%">년도</td>
+                    <td align="center" width="15%">수량</td>
+                    <td align="center" width="15%">사진</td>
+                    <td align="center" width="55%">위치</td>
+                </tr>
+            </table>
+
+        </div>
+
+
+
+    </div>
+    <!-- 본문 끝 -->
+
+
+    <!-- footer -->
+    <div data-role="footer" data-position="fixed" data-hide-during-focus="" data-tap-toggle="false" role="contentinfo"
+         class="footer_btn"><center>
+        <div class="ui-grid-c" style="width:100%;background:#fff;">
+            <div class="ui-block-a" style="width:25%;padding:10px">
+                <img src="../img/btn011.png" class="main_bottom" width="30px" onclick="bottom_btn_main()">
+            </div>
+            <div class="ui-block-b" style="width:25%;padding:10px">
+                <img src="../img/btn02.png" class="qr_bottom" width="30px" onclick="bottom_btn_qr()">
+            </div>
+            <div class="ui-block-c" style="width:25%;padding:10px">
+                <img src="../img/btn03.png" class="monitoring_bottom" width="30px" onclick="bottom_btn_monitor()">
+            </div>
+            <div class="ui-block-d" style="width:25%;padding:10px">
+                <img src="../img/btn04.png" class="setting_bottom" width="30px" onclick="bottom_btn_setting()">
+            </div>
+        </div>
+    </center>
+    </div>
+    <!-- footer -->
+    <div data-role="popup" id="detail_location_popup" data-theme="a" style="width:100%;position:fixed;top:20%">
+        <div style="position:relative;text-align:right;z-index:1000">
+            <div style="text-align:right;float:right"><img src="../img/x2.png" width="25px" onclick="detail_location_popup_close()" style="margin:0px 0px;padding:0px;margin:13px"></div>
+        </div>
+        <div style="position:relative;text-align:center;border-bottom:0.1px solid #37474F">
+            <h3 style="padding:5px;margin:10px" id="detail_location_popup_title">위치 선택</h3>
+        </div>
+        <!-- input  공장 - 공장 이외 -->
+        <table width="100%" style="width:100%;margin:0px 0px;text-align:right;border-bottom:1px solid #B0BEC5;border:none !important; margin-bottom:0px">
+            <tr>
+                <th style="padding:15px;border:1px solid #FAFAFA" align="center" width="50%" valign="middle">
+                    <input type="radio" name="detail_location_01" data-role="none" id="radio01" value="공장"><label data-role="none" for="radio01"><img src="../img/radio00.png" id="radio01_img" width="30px" style="margin:-7px auto"> 공장</label>
+                </th>
+                <th style="padding:15px;border:1px solid #FAFAFA" align="center" width="50%" valign="middle">
+                    <input type="radio" name="detail_location_01" data-role="none" id="radio02" value="공장 이외"><label for="radio02"><img src="../img/radio00.png" id="radio02_img" width="30px" style="margin:-7px auto"> 공장 외</label>
+                </th>
+            </tr>
+            <tr>
+            <th style="padding:15px;padding-left:30px;border:1px solid #FAFAFA" align="left" colspan="2">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a" style="width:60%">
+                        <select id="detail_location_02" name="detail_location_02" data-role="none" style="padding:10px;outline:none;width:80%;background:none;color:#78909C;border:0.1px solid #78909C">
+                            <option value="">위치 선택</option>
+                        </select>
+                    </div>
+                    <div class="ui-block-b" style="width:40%">
+                        <a href="#" class="ui-btn ui-btn-inline" onclick="detail_location_select()" style="height:1.4em;line-height:1.4em;color:#37474F;border:1px solid #37474F;border-radius:0px;width:90% !important;margin:0px !important;padding:7px 0px !important" id = "detail_location_select_btn">완료</a>
+                    </div>
+                </div>
+
+
+            </th>
+            </tr>
+
+            <tr id="detail_location_select_factory_tr" style="display:none">
+                <th style="padding:15px;padding-left:30px;border:1px solid #FAFAFA" colspan="2" align="left">
+                    <input type="text" id="detail_location_select_factory_Bay" data-role="none" style="padding:7px;margin:2px;width:10% !important;outline:none;border:0.1px solid #78909C;ime-mode:inactive;" onkeypress="submit_keyboard(event)">Bay <input type="text" id="detail_location_select_factory_Col" data-role="none" style="padding:7px;margin:2px 0px 2px 10px;width:10% !important;outline:none;border:0.1px solid #78909C;ime-mode:inactive;" onkeypress="submit_keyboard(event)">Col <input type="text" id="detail_location_select_factory_etc" data-role="none" style="padding:7px;margin:2px;width:20% !important;outline:none;border:0.1px solid #78909C;ime-mode:inactive;" onkeypress="submit_keyboard(event)">
+                </th>
+            </tr>
+
+            <tr id="detail_location_select_factory_else_tr" style="display:none">
+                <th style="padding:15px;padding-left:30px;border:1px solid #FAFAFA;border:0.1px solid #78909C" colspan="2" align="left">
+                    <input type="number" id="detail_location_select_factory_else_floor" data-role="none" style="padding:7px;margin:2px;width:10% !important;outline:none" onkeypress="submit_keyboard(event)">층
+                </th>
+            </tr>
+
+            <tr id="detail_location_select_factory_else2_tr" style="display:none">
+                <th style="padding:15px;padding-left:30px;border:1px solid #FAFAFA" colspan="2" align="left">
+                    <input type="number" id="detail_location_select_factory_else_block" data-role="none" style="padding:7px;margin:2px;width:10% !important;outline:none;border:0.1px solid #78909C" onkeypress="submit_keyboard(event)">Block <input type="number" id="detail_location_select_factory_else_sector" data-role="none" style="padding:7px;margin:2px 0px 2px 10px;width:10% !important;outline:none;border:0.1px solid #78909C" onkeypress="submit_keyboard(event)">구간
+                </th>
+            </tr>
+
+            <tr id="detail_location_select_factory_else3_tr"  style="display:none">
+                <th style="padding:15px;padding-left:30px;border:1px solid #FAFAFA" colspan="2" align="left">
+                    <input type="text" id="detail_location_select_factory_else_free" data-role="none" style="padding:7px;margin:2px;width:45% !important;outline:none;border:0.1px solid #78909C !important" onkeypress="submit_keyboard(event)">
+                </th>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
